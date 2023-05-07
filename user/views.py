@@ -27,14 +27,14 @@ from django.contrib.auth.models import User
 
 
 
-@csrf_exempt
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def post(request):
   req = request.data
-  user = User.objects.get(username = email)
+  user = User.objects.get(username = request.user.username)
   with transaction.atomic():
     try:
-      profile = Profile.objects.create(email = req["email"])
+      profile = Profile.objects.create(email = request.user.username)
       profile.user = user
       profile.name = req["username"]
       profile.gender = req["gender"]
@@ -46,11 +46,12 @@ def post(request):
     return Response(serializer.data)
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def update_image(request):
   req = request.data
   with transaction.atomic():
     try:
-      profile = Profile.objects.get(email = req["email"])
+      profile = Profile.objects.get(email = request.user.username)
       profile.image_url = request.FILES["image"]
       profile.save()
     except:
@@ -98,21 +99,6 @@ def delete_account(request,username):
   user.delete()
   return Respone("delete")
 
-@api_view(["GET"])
-def check_email(request,mail):
-  try:
-    user = Profile.objects.get(email = mail)
-    serializer = UserSerializer(user,many= False)
-    return Response(serializer.data)
-  except:
-    return Response("no user")
-
-@api_view(["GET"])
-def login(request,mail):
-  user = Profile.objects.get(email = mail)
-  serializer = ProfileSerializer(user,many = False)
-  return Response(serializer.data)
-
 
 def clean_phone_number(number_str):
     # Remove "+91" and all spaces from the string
@@ -133,6 +119,16 @@ def edit_numbers(numbers):
             edited_numbers.append(number)
     return edited_numbers
 
+# @api_view(["GET"])
+# @permission_classes([IsAuthenticated])
+# def check_email(request):
+#   try:
+#     user = Profile.objects.get(email = request.user.username)
+#     serializer = UserSerializer(user,many= False)
+#     return Response(serializer.data)
+#   except:
+#     return Response("no user")
+
 @api_view(["POST"])
 def get_contacts(request):
   contacts = request.data["contacts"]
@@ -147,13 +143,14 @@ def get_contacts(request):
   return Response(final)
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def get_group_contacts(request):
   contacts = request.data["contacts"]
   group = request.data["group"]
   contacts = json.loads(contacts)
 
-  contacs_edited = edit_numbers(contacts)
-  users_found = Profile.objects.filter(email__in = contacs_edited)
+  contacts_edited = edit_numbers(contacts)
+  users_found = Profile.objects.filter(email__in = contacts_edited)
 
   final = []
   members = Members.objects.values_list("user").filter(user__in = users_found,group = Group.objects.get(id= group))
@@ -167,7 +164,8 @@ def get_group_contacts(request):
   return Response(final)
 
 @api_view(["GET"])
+@permission_classes([IsAuthenticated])
 def delete_account(request,email):
-  user = Profile.objects.get(email = email)
+  user = Profile.objects.get(email = request.user.username)
   user.delete()
   return Response("Deleted")
