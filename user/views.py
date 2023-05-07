@@ -35,11 +35,8 @@ def post(request):
   user = User.objects.get(username = request.user.username)
   with transaction.atomic():
     try:
-      profile = Profile.objects.create(email = request.user.username)
-      profile.user = user
-      profile.name = req["username"]
-      profile.gender = req["gender"]
-      # profile.image_url = request.FILES["image"]
+      profile = Profile.objects.create(email = user.username,user = user,gender = req["gender"],name = req["username"])
+      profile.image_url = request.FILES["image"]
       profile.save()
     except:
       return Response("No user")
@@ -81,7 +78,7 @@ def check_username(request,email):
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
-  response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
+  response = requests.post("http://localhost:8000/user/token/",data = {"username":email,"password":otp})
 
   if response:
     try:

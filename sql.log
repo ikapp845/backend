@@ -914,3 +914,407 @@ CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None; alias=default
 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.015) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, 'e4df56648fa9429aa3bc82666a244db2', '9562267229', NULL, NULL, 'False', '2023-05-07 11:03:09.477648', '', 0); args=(None, None, 'e4df56648fa9429aa3bc82666a244db2', '9562267229', None, None, 'False', '2023-05-07 11:03:09.477648', '', 0); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, '64b3a385bae84ce48d9911e22458b034', '9562267229', NULL, NULL, 'False', '2023-05-07 11:04:40.070563', '', 0); args=(None, None, '64b3a385bae84ce48d9911e22458b034', '9562267229', None, None, 'False', '2023-05-07 11:04:40.070563', '', 0); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, '1011be8a1c0345c0875aa863a2ab84c4', '9562267229', NULL, NULL, 'False', '2023-05-07 11:04:57.934697', '', 0); args=(None, None, '1011be8a1c0345c0875aa863a2ab84c4', '9562267229', None, None, 'False', '2023-05-07 11:04:57.934697', '', 0); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, '3fcc53505e854f6fbdac6de45aa829a5', '9562267229', NULL, NULL, 'False', '2023-05-07 11:05:36.802005', '', 0); args=(None, None, '3fcc53505e854f6fbdac6de45aa829a5', '9562267229', None, None, 'False', '2023-05-07 11:05:36.802005', '', 0); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.015) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, '699d360972634eb3988f81b025294731', '9562267229', NULL, NULL, 'False', '2023-05-07 11:05:36.802005', '', 0); args=(None, None, '699d360972634eb3988f81b025294731', '9562267229', None, None, 'False', '2023-05-07 11:05:36.802005', '', 0); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, '825e37210ffd47018167ed16816b8b15', '9562267229', NULL, NULL, 'False', '2023-05-07 11:05:58.195912', '', 0); args=(None, None, '825e37210ffd47018167ed16816b8b15', '9562267229', None, None, 'False', '2023-05-07 11:05:58.195912', '', 0); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.015) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (NULL, NULL, 'b988a2d01d9647fea921963169f99f82', '9562267229', NULL, NULL, 'False', '2023-05-07 11:06:33.086123', '', 0); args=(None, None, 'b988a2d01d9647fea921963169f99f82', '9562267229', None, None, 'False', '2023-05-07 11:06:33.086123', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.032) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, NULL, '5bd198bad34845e9ab240e40dc19d929', '9562267229', NULL, NULL, 'False', '2023-05-07 11:06:52.791681', '', 0); args=(2, None, '5bd198bad34845e9ab240e40dc19d929', '9562267229', None, None, 'False', '2023-05-07 11:06:52.791681', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', 'a52046355f9c4d08a3f57dcedd6db585', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:08:42.861440', '', 0); args=(2, 'Delvin Saji', 'a52046355f9c4d08a3f57dcedd6db585', '9562267229', 'boy', None, 'False', '2023-05-07 11:08:42.861440', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.015) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', '846613d1211b43d5b073da51f2161e94', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:08:56.981994', '', 0); args=(2, 'Delvin Saji', '846613d1211b43d5b073da51f2161e94', '9562267229', 'boy', None, 'False', '2023-05-07 11:08:56.981994', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', '464ff4dbd2d14fc9859d8d30c54ce55d', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:09:48.412424', '', 0); args=(2, 'Delvin Saji', '464ff4dbd2d14fc9859d8d30c54ce55d', '9562267229', 'boy', None, 'False', '2023-05-07 11:09:48.412424', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "new__group_askquestion" ("id" char(32) NOT NULL PRIMARY KEY, "question" varchar(200) NULL, "group_id" varchar(6) NOT NULL REFERENCES "group_group" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" char(32) NULL REFERENCES "user_profile" ("id") DEFERRABLE INITIALLY DEFERRED, "time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "new__group_askquestion" ("id" char(32) NOT NULL PRIMARY KEY, "question" varchar(200) NULL, "group_id" varchar(6) NOT NULL REFERENCES "group_group" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" char(32) NULL REFERENCES "user_profile" ("id") DEFERRABLE INITIALLY DEFERRED, "time" datetime NOT NULL); args=None; alias=default
+INSERT INTO "new__group_askquestion" ("id", "question", "group_id", "user_id", "time") SELECT "id", "question", "group_id", "user_id", "time" FROM "group_askquestion"; (params ())
+(0.031) INSERT INTO "new__group_askquestion" ("id", "question", "group_id", "user_id", "time") SELECT "id", "question", "group_id", "user_id", "time" FROM "group_askquestion"; args=(); alias=default
+DROP TABLE "group_askquestion"; (params ())
+(0.016) DROP TABLE "group_askquestion"; args=(); alias=default
+ALTER TABLE "new__group_askquestion" RENAME TO "group_askquestion"; (params ())
+(0.000) ALTER TABLE "new__group_askquestion" RENAME TO "group_askquestion"; args=(); alias=default
+CREATE INDEX "group_askquestion_group_id_eed9c128" ON "group_askquestion" ("group_id"); (params ())
+(0.000) CREATE INDEX "group_askquestion_group_id_eed9c128" ON "group_askquestion" ("group_id"); args=(); alias=default
+CREATE INDEX "group_askquestion_user_id_0dc64d62" ON "group_askquestion" ("user_id"); (params ())
+(0.000) CREATE INDEX "group_askquestion_user_id_0dc64d62" ON "group_askquestion" ("user_id"); args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('group', '0002_alter_askquestion_time', '2023-05-07 13:40:31.585845') RETURNING "django_migrations"."id"; args=('group', '0002_alter_askquestion_time', '2023-05-07 13:40:31.585845'); alias=default
+(0.047) PRAGMA foreign_key_check; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL UNIQUE, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "last_login" datetime NULL); (params None)
+(0.000) CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL UNIQUE, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "last_login" datetime NULL); args=None; alias=default
+INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login") SELECT "name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login" FROM "user_profile"; (params ())
+(0.000) INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login") SELECT "name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login" FROM "user_profile"; args=(); alias=default
+DROP TABLE "user_profile"; (params ())
+(0.031) DROP TABLE "user_profile"; args=(); alias=default
+ALTER TABLE "new__user_profile" RENAME TO "user_profile"; (params ())
+(0.016) ALTER TABLE "new__user_profile" RENAME TO "user_profile"; args=(); alias=default
+CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); (params ())
+(0.000) CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); args=(); alias=default
+CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL UNIQUE, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "last_login" datetime NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); (params None)
+(0.000) CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL UNIQUE, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "last_login" datetime NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED); args=None; alias=default
+INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id") SELECT "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id" FROM "user_profile"; (params ())
+(0.000) INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id") SELECT "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id" FROM "user_profile"; args=(); alias=default
+DROP TABLE "user_profile"; (params ())
+(0.000) DROP TABLE "user_profile"; args=(); alias=default
+ALTER TABLE "new__user_profile" RENAME TO "user_profile"; (params ())
+(0.000) ALTER TABLE "new__user_profile" RENAME TO "user_profile"; args=(); alias=default
+CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); (params ())
+(0.016) CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('user', '0002_alter_profile_last_login_alter_profile_user', '2023-05-07 13:40:31.820943') RETURNING "django_migrations"."id"; args=('user', '0002_alter_profile_last_login_alter_profile_user', '2023-05-07 13:40:31.820943'); alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.062) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'group'; args=('group',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'askquestion') LIMIT 21; args=('group', 'askquestion'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'group') LIMIT 21; args=('group', 'group'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'report') LIMIT 21; args=('group', 'report'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'members') LIMIT 21; args=('group', 'members'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'groupquestion') LIMIT 21; args=('group', 'groupquestion'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'group'; args=('group',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'likes'; args=('likes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'likes' AND "django_content_type"."model" = 'like') LIMIT 21; args=('likes', 'like'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'likes' AND "django_content_type"."model" = 'askedlike') LIMIT 21; args=('likes', 'askedlike'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(12, 13); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'likes'; args=('likes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'question'; args=('question',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'question' AND "django_content_type"."model" = 'question') LIMIT 21; args=('question', 'question'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(14,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'question'; args=('question',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'user'; args=('user',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'user' AND "django_content_type"."model" = 'profile') LIMIT 21; args=('user', 'profile'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (15) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(15,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'user'; args=('user',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', 'e6e7383e05e14643bd80e3ae5fded049', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:10:35.738142', '', 0); args=(2, 'Delvin Saji', 'e6e7383e05e14643bd80e3ae5fded049', '9562267229', 'boy', None, 'False', '2023-05-07 11:10:35.738142', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', '26fae547a751432fae353cd5256f80c0', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:10:35.738142', '', 0); args=(2, 'Delvin Saji', '26fae547a751432fae353cd5256f80c0', '9562267229', 'boy', None, 'False', '2023-05-07 11:10:35.738142', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', 'ab240339ed9b416294806e380ff27156', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:10:49.846337', '', 0); args=(2, 'Delvin Saji', 'ab240339ed9b416294806e380ff27156', '9562267229', 'boy', None, 'False', '2023-05-07 11:10:49.846337', '', 0); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" LIMIT 21; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "new__group_askquestion" ("id" char(32) NOT NULL PRIMARY KEY, "question" varchar(200) NULL, "group_id" varchar(6) NOT NULL REFERENCES "group_group" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" char(32) NULL REFERENCES "user_profile" ("id") DEFERRABLE INITIALLY DEFERRED, "time" datetime NOT NULL); (params None)
+(0.000) CREATE TABLE "new__group_askquestion" ("id" char(32) NOT NULL PRIMARY KEY, "question" varchar(200) NULL, "group_id" varchar(6) NOT NULL REFERENCES "group_group" ("id") DEFERRABLE INITIALLY DEFERRED, "user_id" char(32) NULL REFERENCES "user_profile" ("id") DEFERRABLE INITIALLY DEFERRED, "time" datetime NOT NULL); args=None; alias=default
+INSERT INTO "new__group_askquestion" ("id", "question", "group_id", "user_id", "time") SELECT "id", "question", "group_id", "user_id", "time" FROM "group_askquestion"; (params ())
+(0.000) INSERT INTO "new__group_askquestion" ("id", "question", "group_id", "user_id", "time") SELECT "id", "question", "group_id", "user_id", "time" FROM "group_askquestion"; args=(); alias=default
+DROP TABLE "group_askquestion"; (params ())
+(0.000) DROP TABLE "group_askquestion"; args=(); alias=default
+ALTER TABLE "new__group_askquestion" RENAME TO "group_askquestion"; (params ())
+(0.000) ALTER TABLE "new__group_askquestion" RENAME TO "group_askquestion"; args=(); alias=default
+CREATE INDEX "group_askquestion_group_id_eed9c128" ON "group_askquestion" ("group_id"); (params ())
+(0.000) CREATE INDEX "group_askquestion_group_id_eed9c128" ON "group_askquestion" ("group_id"); args=(); alias=default
+CREATE INDEX "group_askquestion_user_id_0dc64d62" ON "group_askquestion" ("user_id"); (params ())
+(0.000) CREATE INDEX "group_askquestion_user_id_0dc64d62" ON "group_askquestion" ("user_id"); args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('group', '0003_alter_askquestion_time', '2023-05-07 13:41:02.065701') RETURNING "django_migrations"."id"; args=('group', '0003_alter_askquestion_time', '2023-05-07 13:41:02.065701'); alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) PRAGMA foreign_keys = OFF; args=None; alias=default
+(0.000) PRAGMA foreign_keys; args=None; alias=default
+(0.000) BEGIN; args=None; alias=default
+CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "last_login" datetime NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "email" varchar(200) NULL); (params None)
+(0.000) CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "last_login" datetime NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "email" varchar(200) NULL); args=None; alias=default
+INSERT INTO "new__user_profile" ("name", "id", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id", "email") SELECT "name", "id", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id", "email" FROM "user_profile"; (params ())
+(0.000) INSERT INTO "new__user_profile" ("name", "id", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id", "email") SELECT "name", "id", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes", "user_id", "email" FROM "user_profile"; args=(); alias=default
+DROP TABLE "user_profile"; (params ())
+(0.000) DROP TABLE "user_profile"; args=(); alias=default
+ALTER TABLE "new__user_profile" RENAME TO "user_profile"; (params ())
+(0.000) ALTER TABLE "new__user_profile" RENAME TO "user_profile"; args=(); alias=default
+CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); (params ())
+(0.000) CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); args=(); alias=default
+CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "last_login" datetime NULL); (params None)
+(0.000) CREATE TABLE "new__user_profile" ("name" varchar(200) NULL, "id" char(32) NOT NULL PRIMARY KEY, "email" varchar(200) NULL, "gender" varchar(200) NULL, "paid_time" date NULL, "paid" varchar(200) NOT NULL, "image_url" varchar(100) NULL, "total_likes" integer NULL, "user_id" integer NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "last_login" datetime NULL); args=None; alias=default
+INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login") SELECT "name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login" FROM "user_profile"; (params ())
+(0.000) INSERT INTO "new__user_profile" ("name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login") SELECT "name", "id", "email", "gender", "paid_time", "paid", "image_url", "total_likes", "user_id", "last_login" FROM "user_profile"; args=(); alias=default
+DROP TABLE "user_profile"; (params ())
+(0.000) DROP TABLE "user_profile"; args=(); alias=default
+ALTER TABLE "new__user_profile" RENAME TO "user_profile"; (params ())
+(0.000) ALTER TABLE "new__user_profile" RENAME TO "user_profile"; args=(); alias=default
+CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); (params ())
+(0.000) CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('user', '0003_alter_profile_email_alter_profile_last_login', '2023-05-07 13:41:02.209233') RETURNING "django_migrations"."id"; args=('user', '0003_alter_profile_email_alter_profile_last_login', '2023-05-07 13:41:02.209233'); alias=default
+(0.000) PRAGMA foreign_key_check; args=None; alias=default
+(0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_extensions'; args=('django_extensions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'django_extensions'; args=('django_extensions',); alias=default
+(0.016) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'group'; args=('group',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'askquestion') LIMIT 21; args=('group', 'askquestion'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'group') LIMIT 21; args=('group', 'group'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'report') LIMIT 21; args=('group', 'report'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'members') LIMIT 21; args=('group', 'members'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'group' AND "django_content_type"."model" = 'groupquestion') LIMIT 21; args=('group', 'groupquestion'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7, 8, 9, 10, 11) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7, 8, 9, 10, 11); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'group'; args=('group',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'likes'; args=('likes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'likes' AND "django_content_type"."model" = 'like') LIMIT 21; args=('likes', 'like'); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'likes' AND "django_content_type"."model" = 'askedlike') LIMIT 21; args=('likes', 'askedlike'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (12, 13) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(12, 13); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'likes'; args=('likes',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'question'; args=('question',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'question' AND "django_content_type"."model" = 'question') LIMIT 21; args=('question', 'question'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (14) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(14,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'question'; args=('question',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'user'; args=('user',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'user' AND "django_content_type"."model" = 'profile') LIMIT 21; args=('user', 'profile'); alias=default
+(0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (15) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(15,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'user'; args=('user',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO "user_profile" ("user_id", "name", "id", "email", "gender", "paid_time", "paid", "last_login", "image_url", "total_likes") VALUES (2, 'Delvin Saji', '9871d9b72411403a9d4b071383ea6358', '9562267229', 'boy', NULL, 'False', '2023-05-07 11:11:05.445105', '', 0); args=(2, 'Delvin Saji', '9871d9b72411403a9d4b071383ea6358', '9562267229', 'boy', None, 'False', '2023-05-07 11:11:05.445105', '', 0); alias=default
+(0.000) UPDATE "user_profile" SET "user_id" = 2, "name" = 'Delvin Saji', "email" = '9562267229', "gender" = 'boy', "paid_time" = NULL, "paid" = 'False', "last_login" = '2023-05-07 11:11:05.445105', "image_url" = '', "total_likes" = 0 WHERE "user_profile"."id" = '9871d9b72411403a9d4b071383ea6358'; args=(2, 'Delvin Saji', '9562267229', 'boy', 'False', '2023-05-07 11:11:05.445105', '', 0, '9871d9b72411403a9d4b071383ea6358'); alias=default

@@ -13,10 +13,10 @@ def key_generator():
     return key
     
 class Profile(models.Model):
-  user = models.ForeignKey(User, on_delete = models.CASCADE)
+  user = models.ForeignKey(User, on_delete = models.CASCADE,null = True,blank = True)
   name = models.CharField(max_length = 200,null = True,blank = True)
   id = models.UUIDField(default=uuid.uuid4,editable=False,unique=True,primary_key = True)
-  email = models.CharField(max_length = 200,null = True,blank = True,unique=True)
+  email = models.CharField(max_length = 200,null = True,blank = True)
   gender = models.CharField(max_length = 200,null = True,blank = True)
   paid_time = models.DateField(null=True, blank=True)
   paid = models.CharField(max_length = 200,default = "False")
