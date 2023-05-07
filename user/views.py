@@ -21,6 +21,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+from rest_framework_simplejwt import views as jwt_views
 # Create your views here.
 
 
@@ -80,7 +81,8 @@ def check_username(request,email):
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
-  response = requests.post("http://localhost:8000/user/token/",data = {"username":email,"password":otp})
+  response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
+
   if response:
     try:
       prof = Profile.objects.get(email = email)

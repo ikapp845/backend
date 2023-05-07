@@ -885,3 +885,32 @@ CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None; alias=default
 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.078) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$390000$7L9NsjDdeFtrpQ0kx93RLx$XnZV6VIcp9KteIdNgYXmpP9vHQ73HGZeVcuAtOs1u10=', "last_login" = NULL, "is_superuser" = 0, "username" = '9562267229', "first_name" = '', "last_name" = '', "email" = '', "is_staff" = 0, "is_active" = 1, "date_joined" = '2023-05-07 11:33:05.289322' WHERE "auth_user"."id" = 2; args=('pbkdf2_sha256$390000$7L9NsjDdeFtrpQ0kx93RLx$XnZV6VIcp9KteIdNgYXmpP9vHQ73HGZeVcuAtOs1u10=', False, '9562267229', '', '', '', False, True, '2023-05-07 11:33:05.289322', 2); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.078) UPDATE "auth_user" SET "password" = 'pbkdf2_sha256$390000$2wpL9pZZ5GK6oWSgoP7uE6$NH6vNM8YzjhoLDOyDAUaw3Hi0zaRpAYHpYyF6vo+UMA=', "last_login" = NULL, "is_superuser" = 0, "username" = '9562267229', "first_name" = '', "last_name" = '', "email" = '', "is_staff" = 0, "is_active" = 1, "date_joined" = '2023-05-07 11:33:05.289322' WHERE "auth_user"."id" = 2; args=('pbkdf2_sha256$390000$2wpL9pZZ5GK6oWSgoP7uE6$NH6vNM8YzjhoLDOyDAUaw3Hi0zaRpAYHpYyF6vo+UMA=', False, '9562267229', '', '', '', False, True, '2023-05-07 11:33:05.289322', 2); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
