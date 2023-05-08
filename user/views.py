@@ -78,7 +78,7 @@ def check_username(request,email):
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
-  response = requests.post("http://localhost:8000/user/token/",data = {"username":email,"password":otp})
+  response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
 
   if response:
     try:
@@ -90,8 +90,6 @@ def check_otp(request,email,otp):
   else:
     return Response("Fail")
   return Response(response.json())
-
-    
 
 
 def clean_phone_number(number_str):

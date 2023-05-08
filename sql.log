@@ -1524,3 +1524,61 @@ CREATE INDEX "user_profile_user_id_8fdce8e2" ON "user_profile" ("user_id"); (par
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None; alias=default
 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" WHERE "user_profile"."email" = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.000) SELECT "user_profile"."id" FROM "user_profile" WHERE "user_profile"."user_id" IN (2); args=(2,); alias=default
+(0.000) SELECT "group_group"."id" FROM "group_group" WHERE "group_group"."admin_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) SELECT "group_askquestion"."id" FROM "group_askquestion" WHERE "group_askquestion"."user_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) DELETE FROM "group_members" WHERE "group_members"."user_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) DELETE FROM "likes_like" WHERE ("likes_like"."user_from_id" IN ('c890c5b559b2471394345eb274fe734a') OR "likes_like"."user_to_id" IN ('c890c5b559b2471394345eb274fe734a')); args=('c890c5b559b2471394345eb274fe734a', 'c890c5b559b2471394345eb274fe734a'); alias=default
+(0.000) DELETE FROM "likes_askedlike" WHERE ("likes_askedlike"."user_from_id" IN ('c890c5b559b2471394345eb274fe734a') OR "likes_askedlike"."user_to_id" IN ('c890c5b559b2471394345eb274fe734a')); args=('c890c5b559b2471394345eb274fe734a', 'c890c5b559b2471394345eb274fe734a'); alias=default
+(0.000) DELETE FROM "django_admin_log" WHERE "django_admin_log"."user_id" IN (2); args=(2,); alias=default
+(0.000) DELETE FROM "auth_user_groups" WHERE "auth_user_groups"."user_id" IN (2); args=(2,); alias=default
+(0.000) DELETE FROM "auth_user_user_permissions" WHERE "auth_user_user_permissions"."user_id" IN (2); args=(2,); alias=default
+(0.000) DELETE FROM "auth_user" WHERE "auth_user"."id" IN (2); args=(2,); alias=default
+(0.000) DELETE FROM "user_profile" WHERE "user_profile"."id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) SELECT "group_group"."id" FROM "group_group" WHERE "group_group"."admin_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) SELECT "group_askquestion"."id" FROM "group_askquestion" WHERE "group_askquestion"."user_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) DELETE FROM "group_members" WHERE "group_members"."user_id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) DELETE FROM "likes_like" WHERE ("likes_like"."user_from_id" IN ('c890c5b559b2471394345eb274fe734a') OR "likes_like"."user_to_id" IN ('c890c5b559b2471394345eb274fe734a')); args=('c890c5b559b2471394345eb274fe734a', 'c890c5b559b2471394345eb274fe734a'); alias=default
+(0.000) DELETE FROM "likes_askedlike" WHERE ("likes_askedlike"."user_from_id" IN ('c890c5b559b2471394345eb274fe734a') OR "likes_askedlike"."user_to_id" IN ('c890c5b559b2471394345eb274fe734a')); args=('c890c5b559b2471394345eb274fe734a', 'c890c5b559b2471394345eb274fe734a'); alias=default
+(0.000) DELETE FROM "user_profile" WHERE "user_profile"."id" IN ('c890c5b559b2471394345eb274fe734a'); args=('c890c5b559b2471394345eb274fe734a',); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:25.340497' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:25.340497', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "user_profile"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "user_profile"; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" ORDER BY "user_profile"."id" DESC; args=(); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:25.479557' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:25.479557', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:25.561819' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:25.561819', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "user_profile"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "user_profile"; args=(); alias=default
+(0.000) SELECT "user_profile"."user_id", "user_profile"."name", "user_profile"."id", "user_profile"."email", "user_profile"."gender", "user_profile"."paid_time", "user_profile"."paid", "user_profile"."last_login", "user_profile"."image_url", "user_profile"."total_likes" FROM "user_profile" ORDER BY "user_profile"."id" DESC; args=(); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:26.341239' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:26.341239', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" ORDER BY "auth_group"."name" ASC; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "auth_user"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "auth_user"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" ORDER BY "auth_user"."username" ASC; args=(); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:26.447601' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:26.447601', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-05-08 09:03:26.590650' AND "django_session"."session_key" = 'q77u1bhqye9z186ll103wzm6iuisbgo2') LIMIT 21; args=('2023-05-08 09:03:26.590650', 'q77u1bhqye9z186ll103wzm6iuisbgo2'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" ORDER BY "auth_group"."name" ASC; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "auth_user"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "auth_user"; args=(); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" ORDER BY "auth_user"."username" ASC; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+(0.016) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
