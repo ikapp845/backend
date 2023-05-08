@@ -78,7 +78,7 @@ def check_username(request,email):
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
-  response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
+  response = requests.post("http://localhost:8000/user/token/",data = {"username":email,"password":otp})
 
   if response:
     try:
@@ -92,11 +92,6 @@ def check_otp(request,email,otp):
   return Response(response.json())
 
     
-@api_view(["GET"])
-def delete_account(request,username):
-  user = Profile.objects.get(email = username)
-  user.delete()
-  return Respone("delete")
 
 
 def clean_phone_number(number_str):
@@ -164,7 +159,9 @@ def get_group_contacts(request):
 
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
-def delete_account(request,email):
-  user = Profile.objects.get(email = request.user.username)
+def delete_account(request):
+  user = User.objects.get(username = request.user.username)
+  prof = Profile.objects.get(email = request.user.username)
   user.delete()
+  prof.delete()
   return Response("Deleted")

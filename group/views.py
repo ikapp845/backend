@@ -23,10 +23,11 @@ from django.core.cache import cache
 def create_group(request):
   with transaction.atomic():
     req = request.data
-    group = Group.objects.create(name= req["name"])
+    user = Profile.objects.get(email = req["username"])
+    group = Group.objects.create(name= req["name"],admin = user)
     group.save()
 
-    user = Profile.objects.get(email = req["username"])
+    
     member = Members.objects.create(group = group,user = user)
     member.save()
 
