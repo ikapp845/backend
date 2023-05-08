@@ -11,14 +11,11 @@ from datetime import datetime
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 from group.serializers import UserSerializer
-import ssl
-import smtplib
 from email.message import EmailMessage
 import requests
 import random
 import string
 import json
-from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework_simplejwt import views as jwt_views

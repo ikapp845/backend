@@ -20,10 +20,11 @@ from django.core.cache import cache
 
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def create_group(request):
   with transaction.atomic():
     req = request.data
-    user = Profile.objects.get(email = req["username"])
+    user = Profile.objects.get(email = request.user.username)
     group = Group.objects.create(name= req["name"],admin = user)
     group.save()
 
@@ -35,11 +36,12 @@ def create_group(request):
 
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def join_group(request):
   req = request.data
   try:
     group = Group.objects.get(id = req["group"])
-    user = Profile.objects.get(email= req["username"])
+    user = Profile.objects.get(email= request.user.username)
   except:
     return Response("Group does not exist")
 
@@ -57,6 +59,7 @@ def join_group(request):
 
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def add_group_members_contact(request):
     with transaction.atomic():
         contacts = request.data["selected"]
@@ -65,7 +68,6 @@ def add_group_members_contact(request):
         members = [Members(group=group, user=user) for user in users]
         Members.objects.bulk_create(members)
     return Response("Added")
-
 
 
 def compare_dates(desired,now):
@@ -85,6 +87,7 @@ def compare_dates(desired,now):
 
 
 @api_view(["GET"])
+@permission_classes([IsAuthenticated])
 def group_members(request,group):
   group = Group.objects.get(id = group)
   members = Members.objects.select_related("user","group").filter(group = group)
@@ -92,6 +95,7 @@ def group_members(request,group):
   return Response(serializer.data)
 
 @api_view(["GET"])
+@permission_classes([IsAuthenticated])
 def group_main(request,group,email):
 
   def group_members(gp):
@@ -138,11 +142,12 @@ def group_main(request,group,email):
 
 #{"username"","group""} 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def leave(request):
   req = request.data
   with transaction.atomic():
     group = Group.objects.get(id =req["group"] )
-    user = Profile.objects.get(email= req["username"])
+    user = Profile.objects.get(email= request.user.username)
     mem = Members.objects.get(group = group,user = user)
     mem.delete()
   return Response("removed")
@@ -153,8 +158,6 @@ def user_groups(request,username):
   members = Members.objects.select_related("group").filter(user = user)
   serializer = UserGroupsSerializer(members,many  = True)
   return Response(serializer.data)
-
-
 
 
 @api_view(["POST"])
@@ -177,11 +180,11 @@ from django.core.cache import cache
 
 @api_view(["GET"])
 def add(request):
-  ques = Question.objects.all()
   a = []
-  for items in ques:
-    a.append(items.question)
-  return Response(a)
+  for items in a:
+    q = Question.objects.create(question = items)
+    q.save()
+  return Response("aa")
 
 @api_view(["POST"])
 def remove_member(request):
