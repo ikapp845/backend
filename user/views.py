@@ -30,15 +30,20 @@ from rest_framework_simplejwt import views as jwt_views
 def post(request):
   req = request.data
   user = User.objects.get(username = request.user.username)
-  with transaction.atomic():
-    try:
-      profile = Profile.objects.create(email = user.username,user = user,gender = req["gender"],name = req["username"])
-      # profile.image_url = request.FILES["image"]
-      profile.save()
-    except:
-      return Response("No user")
+  try:
+    prof = Profile.objects.get(email = user.username)
     serializer = UserSerializer(profile,many = False)
     return Response(serializer.data)
+  except:
+    with transaction.atomic():
+      try:
+        profile = Profile.objects.create(email = user.username,user = user,gender = req["gender"],name = req["username"])
+        # profile.image_url = request.FILES["image"]
+        profile.save()
+      except:
+        return Response("No user")
+      serializer = UserSerializer(profile,many = False)
+      return Response(serializer.data)
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])

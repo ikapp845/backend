@@ -133,7 +133,7 @@ def group_main(request,group,email):
 
 
   gp =  Group.objects.get(id = group)
-  user = Profile.objects.get(email = email)
+  user = Profile.objects.get(email = request.user.username)
   group_mem,group_length  = group_members(gp)
   group_ques,time= group_questions(gp,user,group,group_length = group_length)
   final = {"members":group_mem,"questions":group_ques,"time" : time}
@@ -153,6 +153,7 @@ def leave(request):
   return Response("removed")
 
 @api_view(["GET"])
+@permission_classes([IsAuthenticated])
 def user_groups(request,username):
   user = Profile.objects.get(email= username)
   members = Members.objects.select_related("group").filter(user = user)
@@ -161,6 +162,7 @@ def user_groups(request,username):
 
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def add_question(request):
   req = request.data
   group = Group.objects.get(id = req["group"])
@@ -169,6 +171,7 @@ def add_question(request):
   return Response("Question Added")
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def report(request,group,question):
   group = Group.objects.get(id = group)
   question = AskQuestion.objects.get(id = question)
@@ -187,6 +190,7 @@ def add(request):
   return Response("aa")
 
 @api_view(["POST"])
+@permission_classes([IsAuthenticated])
 def remove_member(request):
   req = request.data
   user = Profile.objects.get(email = req["email"])
