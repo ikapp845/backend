@@ -64,6 +64,11 @@ def key_generator():
     key = ''.join(random.choice(string.digits) for x in range(6))
     return key
 
+
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
 @api_view(["GET"])
 def check_username(request,email):
   otp = key_generator()
@@ -74,7 +79,7 @@ def check_username(request,email):
   except:
     new = User.objects.create_user(username = email,password= otp)
     new.save()
-  result = requests.get(f"https://2factor.in/API/V1/5dc6d93d-bca5-11ed-81b6-0200cd936042/SMS/{email}/{otp}/ik")
+  result = requests.get(f"https://2factor.in/API/V1/{env(FACTOR_API_KEY)}/SMS/{email}/{otp}/ik")
   print(otp)
   return Response("otp sent")
 
