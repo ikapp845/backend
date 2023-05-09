@@ -74,14 +74,13 @@ def check_username(request,email):
   except:
     new = User.objects.create_user(username = email,password= otp)
     new.save()
-  result = requests.get(f"https://2factor.in/API/V1/7f7d9d0a-d2a6-11ed-addf-0200cd936042/SMS/{email}/{otp}/ik")
+  result = requests.get(f"https://2factor.in/API/V1/5dc6d93d-bca5-11ed-81b6-0200cd936042/SMS/{email}/{otp}/ik")
   print(otp)
   return Response("otp sent")
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
   response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
-
   if response:
     try:
       prof = Profile.objects.get(email = email)
