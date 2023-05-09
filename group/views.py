@@ -166,7 +166,7 @@ def user_groups(request,username):
 def add_question(request):
   req = request.data
   group = Group.objects.get(id = req["group"])
-  question = AskQuestion.objects.create(group = group,question = req["question"],total_members = total_members_count(group))
+  question = AskQuestion.objects.create(group = group,question = req["question"])
   question.save()
   return Response("Question Added")
 
