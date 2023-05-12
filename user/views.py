@@ -169,3 +169,9 @@ def delete_account(request):
   user.delete()
   prof.delete()
   return Response("Deleted")
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def verify_token(request):
+    return Response({'detail': 'Token is valid'})
