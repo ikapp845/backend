@@ -85,7 +85,7 @@ def check_username(request,email):
 
 @api_view(["GET"])
 def check_otp(request,email,otp):
-  response = requests.post("https://ik-l2n0.onrender.com/user/token/",data = {"username":email,"password":otp})
+  response = requests.post("http://127.0.0.1:8000/user/token/",data = {"username":email,"password":otp})
   if response:
     try:
       prof = Profile.objects.get(email = email)
@@ -175,3 +175,10 @@ def delete_account(request):
 @permission_classes([IsAuthenticated])
 def verify_token(request):
     return Response({'detail': 'Token is valid'})
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def get_coins(request):
+  user = Profile.objects.get(email = request.user.username)
+  return Response({"user":user.email,"coins":user.coins})

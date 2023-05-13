@@ -37,13 +37,19 @@ def like(request):
 
   likes = Like.objects.filter(group=group, question=question)
   result = (
-      likes.values('user_to__name')
+      likes.values('user_to__name',"user_to__email")
       .annotate(count=Count('id'))
-      .values('user_to__name', 'count')
+      .values('user_to__name','count',"user_to__email")
+      .order_by("-count")
   )
 
+  if result[0]["user_to__email"] == username2:
+    a = profiles[username1].coins + 50
+    profiles[username1].coins = a
+    profiles[username1].save()
+
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result}}
+  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a}
 
   return Response(result)
 
@@ -74,11 +80,16 @@ def asked_like(request):
       likes.values('user_to__name')
       .annotate(count=Count('id'))
       .values('user_to__name', 'count')
+      .order_by("-count")
   )
 
+  if result[0]["user_to__email"] == username2:
+    a = profiles[username1].coins + 50
+    profiles[username1].coins = a
+    profiles[username1].save()
 
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result}}
+  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a}
 
   return Response(result)
 

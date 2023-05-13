@@ -22,8 +22,8 @@ class Profile(models.Model):
   paid = models.CharField(max_length = 200,default = "False")
   last_login = models.DateTimeField(default=datetime.now(),null = True,blank = True)
   image_url = models.ImageField(upload_to = "media/",null = True,blank = True)
-  # otp = models.CharField(max_length=6, default=key_generator, unique=True, editable=True)
   total_likes = models.IntegerField(null = True,blank = True,default=0)
+  coins = models.IntegerField(default = 0)
 
 
   def __str__(self):
