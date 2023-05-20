@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from django.db import transaction
 from .models import Profile
 from group.models import Members,Group
+from likes.models import Like,AskedLike
 from group.serializers import ProfileSerializer
 from datetime import datetime
 from rest_framework.views import APIView
@@ -170,11 +171,31 @@ def delete_account(request):
   prof.delete()
   return Response("Deleted")
 
+from django.utils import timezone
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def verify_token(request):
-    return Response({'detail': 'Token is valid'})
+
+  user = Profile.objects.get(email = request.user.username)
+  time = user.last_login
+  user.last_login = timezone.now()
+  user.save()
+
+  a = False
+
+  likes = Like.objects.filter(user_to=user).order_by("-time")
+  if(likes):
+    if likes[0].time >= time:
+      a = True
+
+  asked_likes = AskedLike.objects.filter(user_to=user).order_by("-time")
+  if asked_likes:
+    if asked_likes[0].time >= time:
+      a = True
+
+  return Response({'detail': 'Token is valid',"like":a})
+
 
 
 @api_view(["GET"])

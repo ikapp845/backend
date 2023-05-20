@@ -5,6 +5,7 @@ from django.utils.translation import gettext_lazy as _
 import random
 import string
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 
@@ -20,7 +21,7 @@ class Profile(models.Model):
   gender = models.CharField(max_length = 200,null = True,blank = True)
   paid_time = models.DateField(null=True, blank=True)
   paid = models.CharField(max_length = 200,default = "False")
-  last_login = models.DateTimeField(default=datetime.now(),null = True,blank = True)
+  last_login = models.DateTimeField(default=timezone.now,null = True,blank = True)
   image_url = models.ImageField(upload_to = "media/",null = True,blank = True)
   total_likes = models.IntegerField(null = True,blank = True,default=0)
   coins = models.IntegerField(default = 0)

@@ -1,9 +1,5 @@
 from django.db import models
-
-# Create your models here.
 from django.db import models
-
-# Create your models here.
 from django.db import models
 import uuid
 from user.models import Profile
