@@ -112,7 +112,7 @@ def group_main(request,group,email):
       g = GroupQuestion.objects.filter(group = gp).delete()
       user_que = AskQuestion.objects.filter(group = gp,time__gt = one_hour_ago)
       user_que_count = len(user_que)
-      ik_que = Question.objects.using("question").filter().order_by("?")[:10-user_que_count]
+      ik_que = Question.objects.filter().order_by("?")[:10-user_que_count]
       question_list = list(user_que) + list(ik_que)
       a = []
       for items in question_list:
@@ -183,15 +183,12 @@ from django.core.cache import cache
 
 @api_view(["GET"])
 def add(request):
-  a = ["aaa"]
-  # for items in a:
-  #   q = Question.objects.using("question").create(question = items)
-  #   q.save()
-  li = []
   q = Question.objects.using("question").all()
+
   for items in q:
-    print(items.question)
-  return Response(li)
+    a = Question.objects.create(question = items.question)
+    a.save()
+  return Response("saved")
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
