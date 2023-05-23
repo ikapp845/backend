@@ -22,7 +22,7 @@ def like(request):
   question_id = req["question"]
   profile_qs = Profile.objects.filter(email__in=[username1, username2])
   profiles = {profile.email: profile for profile in profile_qs}
-  question = Question.objects.get(id=question_id)
+  question = Question.objects.using("question").get(id=question_id)
   group = Group.objects.get(id = req["group"])
   members = Members.objects.filter(group = group)
 
@@ -117,7 +117,9 @@ def get_friends_likes(request,username):
   return Response(serializer.data)
 
 
-
+# @api_view(["POST"])
+# @permission_classes([IsAuthenticated])
+# def like_visited(request):
 
 
 

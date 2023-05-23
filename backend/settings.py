@@ -113,19 +113,20 @@ LOGGING = {
 }
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': "ik",
-#         "USER":"admin",
-#         "PASSWORD":"okeda123",
-#         "HOST":env("DATABASE_HOST"),
-#         "PORT":3306
-#     }
-# }
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "ik2",
+        "USER":"admin",
+        "PASSWORD":"okeda123",
+        "HOST":env("DATABASE_HOST"),
+        "PORT":3306,
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+        },
+    },
+    'question': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }

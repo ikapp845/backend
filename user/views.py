@@ -39,7 +39,7 @@ def post(request):
     with transaction.atomic():
       try:
         profile = Profile.objects.create(email = user.username,user = user,gender = req["gender"],name = req["username"])
-        # profile.image_url = request.FILES["image"]
+        profile.image_url = request.FILES["image"]
         profile.save()
       except:
         return Response("No user")
