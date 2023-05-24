@@ -33,7 +33,7 @@ def post(request):
   user = User.objects.get(username = request.user.username)
   try:
     prof = Profile.objects.get(email = user.username)
-    serializer = UserSerializer(profile,many = False)
+    serializer = UserSerializer(prof,many = False)
     return Response(serializer.data)
   except:
     with transaction.atomic():

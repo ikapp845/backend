@@ -27,7 +27,7 @@ def key_generator():
 class Group(models.Model):
   name = models.CharField(max_length = 200,null  =True,blank = True)
   id = models.CharField(max_length=6, default=key_generator, unique=True, editable=False,primary_key = True)
-  admin = models.ForeignKey(Profile,on_delete = models.CASCADE,null = True,blank = True)
+  admin = models.ForeignKey(Profile,on_delete = models.SET_NULL,null = True,blank = True)
 
   def __str__(self):
     return self.name + " " + self.id
