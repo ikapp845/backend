@@ -117,10 +117,20 @@ def get_friends_likes(request,username):
   return Response(serializer.data)
 
 
-# @api_view(["POST"])
-# @permission_classes([IsAuthenticated])
-# def like_visited(request):
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def like_visited(request):
+  req = request.data
+
+  if req["source"] == "ik":
+    like = Like.objects.get(id = req["id"])
+  else:
+    like = AskedLike.objects.get(id = req["id"])
+
+  like.visited = True
+  like.save()
+
+  return Response("Visited set True")
 
 
 
-# Create your views here.
