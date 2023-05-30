@@ -4540,3 +4540,913 @@ ALTER TABLE `user_profile` ALTER COLUMN `coins` DROP DEFAULT; (params [])
 (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',); alias=default
 (0.046) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
 (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SHOW FULL TABLES; args=None; alias=default
+(0.313) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.078) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.047) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.047) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.047) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.047) SHOW INDEX FROM `group_members`; args=None; alias=default
+ALTER TABLE `group_members` DROP FOREIGN KEY `group_members_group_id_68d06a36_fk_group_group_id`; (params ())
+(0.187) ALTER TABLE `group_members` DROP FOREIGN KEY `group_members_group_id_68d06a36_fk_group_group_id`; args=(); alias=default
+(0.047) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.047) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.031) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.047) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.047) SHOW INDEX FROM `group_members`; args=None; alias=default
+DROP INDEX `group_members_group_id_68d06a36_fk_group_group_id` ON `group_members`; (params ())
+(0.078) DROP INDEX `group_members_group_id_68d06a36_fk_group_group_id` ON `group_members`; args=(); alias=default
+ALTER TABLE `group_members` ADD CONSTRAINT `group_members_group_id_68d06a36_uniq` UNIQUE (`group_id`); (params ())
+(0.063) None; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:51:50.683080' AND `django_session`.`session_key` = 'etnubh8bxhcqxdirc0ihczcye6jy1a1g') LIMIT 21; args=('2023-05-30 13:51:50.683080', 'etnubh8bxhcqxdirc0ihczcye6jy1a1g'); alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'etnubh8bxhcqxdirc0ihczcye6jy1a1g' LIMIT 21; args=('etnubh8bxhcqxdirc0ihczcye6jy1a1g',); alias=default
+(0.047) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('etnubh8bxhcqxdirc0ihczcye6jy1a1g'); args=('etnubh8bxhcqxdirc0ihczcye6jy1a1g',); alias=default
+(0.032) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'delvinsaji' LIMIT 21; args=('delvinsaji',); alias=default
+(0.047) UPDATE `auth_user` SET `password` = 'pbkdf2_sha256$390000$uWkmL6G8Qu2fqHapZEJWPZ$ESeF+lecgD6jMPsCJ11opQ/n/QDih483cm9cp20T8UU=' WHERE `auth_user`.`id` = 1; args=('pbkdf2_sha256$390000$uWkmL6G8Qu2fqHapZEJWPZ$ESeF+lecgD6jMPsCJ11opQ/n/QDih483cm9cp20T8UU=', 1); alias=default
+(0.047) SELECT 1 AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw' LIMIT 1; args=(1, 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('ilqqs4i029u5ihh11h6vwug4wk47x0nw', 'e30:1q3zlX:PuuVbvanfBspAWLxw8cQ3TsG5AqIFAxi2fbA9QFsg_Q', '2023-06-13 13:51:59.030541'); args=('ilqqs4i029u5ihh11h6vwug4wk47x0nw', 'e30:1q3zlX:PuuVbvanfBspAWLxw8cQ3TsG5AqIFAxi2fbA9QFsg_Q', '2023-06-13 13:51:59.030541'); alias=default
+(0.047) UPDATE `auth_user` SET `last_login` = '2023-05-30 13:51:59.204813' WHERE `auth_user`.`id` = 1; args=('2023-05-30 13:51:59.204813', 1); alias=default
+(0.047) UPDATE `django_session` SET `session_data` = '.eJxVjEEOwiAQRe_C2pBihwFcuu8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnERSpx-t0DxkeoO-E711mRsdV3mIHdFHrTLqXF6Xg_376BQL986axcMo4IAiazSQHgeEpoBQEVgawDJMuJIGt1oNAatI-QxB-aM0Yn3B8qNN4k:1q3zlX:V2oyTJjM-I_8OXFkDYyAo5YUlRw7zm9CmwScjwCVdvM', `expire_date` = '2023-06-13 13:51:59.254599' WHERE `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'; args=('.eJxVjEEOwiAQRe_C2pBihwFcuu8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnERSpx-t0DxkeoO-E711mRsdV3mIHdFHrTLqXF6Xg_376BQL986axcMo4IAiazSQHgeEpoBQEVgawDJMuJIGt1oNAatI-QxB-aM0Yn3B8qNN4k:1q3zlX:V2oyTJjM-I_8OXFkDYyAo5YUlRw7zm9CmwScjwCVdvM', '2023-06-13 13:51:59.254599', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:51:59.465832' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:51:59.465832', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:00.169516' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:00.169516', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:02.273016' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:02.273016', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:03.157214' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:03.157214', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:03.595316' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:03.595316', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:05.218739' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:05.218739', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` = '6e8b958a04a942068b7307e01d0216ef' LIMIT 21; args=('6e8b958a04a942068b7307e01d0216ef',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'members') LIMIT 21; args=('group', 'members'); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:06.093933' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:06.093933', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.282) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:06.582249' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:06.582249', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` = '6e8b958a04a942068b7307e01d0216ef' LIMIT 21; args=('6e8b958a04a942068b7307e01d0216ef',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:08.502968' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:08.502968', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.062) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.079) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.078) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.078) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.062) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:09.471799' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:09.471799', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.062) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.063) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:10.451073' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:10.451073', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` = '6045913ee7f74a0384bebf64031eb849' LIMIT 21; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.375) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:11.568527' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:11.568527', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:12.013560' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:12.013560', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` = '6045913ee7f74a0384bebf64031eb849' LIMIT 21; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.062) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:14.020865' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:14.020865', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.046) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:14.825756' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:14.825756', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:54.707491' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:54.707491', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` IN ('6045913ee7f74a0384bebf64031eb849') ORDER BY `group_members`.`id` DESC LIMIT 1; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` IN ('6045913ee7f74a0384bebf64031eb849') ORDER BY `group_members`.`id` DESC; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.547) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:56.084368' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:56.084368', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.063) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:57.230365' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:57.230365', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` IN ('6045913ee7f74a0384bebf64031eb849') ORDER BY `group_members`.`id` DESC LIMIT 1; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` WHERE `group_members`.`id` IN ('6045913ee7f74a0384bebf64031eb849') ORDER BY `group_members`.`id` DESC; args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.046) INSERT INTO `django_admin_log` (`action_time`, `user_id`, `content_type_id`, `object_id`, `object_repr`, `action_flag`, `change_message`) VALUES ('2023-05-30 13:52:57.889838', 1, 10, '6045913e-e7f7-4a03-84be-bf64031eb849', 'Aa  Sam', 3, ''); args=['2023-05-30 13:52:57.889838', 1, 10, '6045913e-e7f7-4a03-84be-bf64031eb849', 'Aa  Sam', 3, '']; alias=default
+(0.047) DELETE FROM `group_members` WHERE `group_members`.`id` IN ('6045913ee7f74a0384bebf64031eb849'); args=('6045913ee7f74a0384bebf64031eb849',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:58.133225' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:58.133225', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.063) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:58.802481' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:58.802481', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:52:59.249629' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:52:59.249629', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.046) SHOW FULL TABLES; args=None; alias=default
+(0.063) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.031) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.047) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.046) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.047) SHOW INDEX FROM `group_members`; args=None; alias=default
+(0.032) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.046) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.047) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.047) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.063) SHOW INDEX FROM `group_members`; args=None; alias=default
+ALTER TABLE `group_members` ADD CONSTRAINT `group_members_group_id_68d06a36_uniq` UNIQUE (`group_id`); (params ())
+(0.093) ALTER TABLE `group_members` ADD CONSTRAINT `group_members_group_id_68d06a36_uniq` UNIQUE (`group_id`); args=(); alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('group', '0010_alter_askquestion_time_alter_members_group', '2023-05-30 13:53:07.026709'); args=['group', '0010_alter_askquestion_time_alter_members_group', '2023-05-30 13:53:07.026709']; alias=default
+(0.047) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.046) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.047) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.047) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.047) SHOW INDEX FROM `group_members`; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('group', '0011_alter_askquestion_time_alter_members_group', '2023-05-30 13:53:07.411468'); args=['group', '0011_alter_askquestion_time_alter_members_group', '2023-05-30 13:53:07.411468']; alias=default
+(0.047) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.047) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.031) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.047) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.047) SHOW INDEX FROM `group_members`; args=None; alias=default
+(0.078) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`,
+                c.`constraint_type`
+            FROM
+                information_schema.key_column_usage AS kc,
+                information_schema.table_constraints AS c
+            WHERE
+                kc.table_schema = DATABASE() AND
+                c.table_schema = kc.table_schema AND
+                c.constraint_name = kc.constraint_name AND
+                c.constraint_type != 'CHECK' AND
+                kc.table_name = 'group_members'
+            ORDER BY kc.`ordinal_position`
+        ; args=['group_members']; alias=default
+(0.047) 
+            SELECT  table_collation
+            FROM    information_schema.tables
+            WHERE   table_schema = DATABASE()
+            AND     table_name = 'group_members'
+            ; args=['group_members']; alias=default
+(0.047) 
+            SELECT
+                column_name, data_type, character_maximum_length,
+                numeric_precision, numeric_scale, extra, column_default,
+                CASE
+                    WHEN collation_name = 'utf8mb4_unicode_ci' THEN NULL
+                    ELSE collation_name
+                END AS collation_name,
+                CASE
+                    WHEN column_type LIKE '% unsigned' THEN 1
+                    ELSE 0
+                END AS is_unsigned
+            FROM information_schema.columns
+            WHERE table_name = 'group_members' AND table_schema = DATABASE()
+            ; args=['utf8mb4_unicode_ci', 'group_members']; alias=default
+(0.047) SELECT * FROM `group_members` LIMIT 1; args=None; alias=default
+(0.093) 
+                    SELECT cc.constraint_name, cc.check_clause
+                    FROM
+                        information_schema.check_constraints AS cc,
+                        information_schema.table_constraints AS tc
+                    WHERE
+                        cc.constraint_schema = DATABASE() AND
+                        tc.table_schema = cc.constraint_schema AND
+                        cc.constraint_name = tc.constraint_name AND
+                        tc.constraint_type = 'CHECK' AND
+                        tc.table_name = 'group_members'
+                ; args=['group_members']; alias=default
+(0.079) SHOW INDEX FROM `group_members`; args=None; alias=default
+ALTER TABLE `group_members` DROP INDEX `group_members_group_id_68d06a36_uniq`; (params ())
+(0.359) ALTER TABLE `group_members` DROP INDEX `group_members_group_id_68d06a36_uniq`; args=(); alias=default
+CREATE INDEX `group_members_group_id_68d06a36` ON `group_members` (`group_id`); (params ())
+(0.094) CREATE INDEX `group_members_group_id_68d06a36` ON `group_members` (`group_id`); args=(); alias=default
+ALTER TABLE `group_members` ADD CONSTRAINT `unique_user_group` UNIQUE (`user_id`, `group_id`); (params None)
+(0.140) ALTER TABLE `group_members` ADD CONSTRAINT `unique_user_group` UNIQUE (`user_id`, `group_id`); args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('group', '0012_alter_askquestion_time_alter_members_group_and_more', '2023-05-30 13:53:08.781755'); args=['group', '0012_alter_askquestion_time_alter_members_group_and_more', '2023-05-30 13:53:08.781755']; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+(0.046) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,); alias=default
+(0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.046) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+(0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+(0.046) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'django_extensions'; args=('django_extensions',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'group'; args=('group',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'askquestion') LIMIT 21; args=('group', 'askquestion'); alias=default
+(0.046) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'group') LIMIT 21; args=('group', 'group'); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'report') LIMIT 21; args=('group', 'report'); alias=default
+(0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'members') LIMIT 21; args=('group', 'members'); alias=default
+(0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'groupquestion') LIMIT 21; args=('group', 'groupquestion'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (7, 8, 9, 10, 11) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(7, 8, 9, 10, 11); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'group'; args=('group',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'likes'; args=('likes',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'likes' AND `django_content_type`.`model` = 'like') LIMIT 21; args=('likes', 'like'); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'likes' AND `django_content_type`.`model` = 'askedlike') LIMIT 21; args=('likes', 'askedlike'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (12, 13) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(12, 13); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'likes'; args=('likes',); alias=default
+(0.046) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'question'; args=('question',); alias=default
+(0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'question' AND `django_content_type`.`model` = 'question') LIMIT 21; args=('question', 'question'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (14) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(14,); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'question'; args=('question',); alias=default
+(0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'user' AND `django_content_type`.`model` = 'profile') LIMIT 21; args=('user', 'profile'); alias=default
+(0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (15) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(15,); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:19.777902' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:19.777902', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.390) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:20.530402' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:20.530402', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:22.282082' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:22.282082', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:21.326069' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:21.326069', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'members') LIMIT 21; args=('group', 'members'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.062) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:23.045300' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:23.045300', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:23.468186' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:23.468186', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:26.787857' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:26.787857', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.062) SELECT 1 AS `a` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 1; args=(1, 'tjt2iA'); alias=default
+(0.032) SELECT 1 AS `a` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 1; args=(1, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.031) SELECT 1 AS `a` FROM `group_members` WHERE (`group_members`.`group_id` = 'tjt2iA' AND `group_members`.`user_id` = 'bd186f02ff814223b901c6d9e616cf6b') LIMIT 1; args=(1, 'tjt2iA', 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) INSERT INTO `group_members` (`id`, `group_id`, `user_id`) VALUES ('3e9fbb328a70416397d68c67418d1198', 'tjt2iA', 'bd186f02ff814223b901c6d9e616cf6b'); args=('3e9fbb328a70416397d68c67418d1198', 'tjt2iA', 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) INSERT INTO `django_admin_log` (`action_time`, `user_id`, `content_type_id`, `object_id`, `object_repr`, `action_flag`, `change_message`) VALUES ('2023-05-30 13:53:27.484276', 1, 10, '3e9fbb32-8a70-4163-97d6-8c67418d1198', 'Aa  Sam', 1, '[{\"added\": {}}]'); args=['2023-05-30 13:53:27.484276', 1, 10, '3e9fbb32-8a70-4163-97d6-8c67418d1198', 'Aa  Sam', 1, '[{"added": {}}]']; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:27.645383' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:27.645383', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.516) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:28.860441' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:28.860441', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:29.330802' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:29.330802', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_members`; args=(); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id` FROM `group_members` ORDER BY `group_members`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:31.068664' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:31.068664', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:31.765382' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:31.765382', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:32.205227' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:32.205227', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:35.988207' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:35.988207', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT 1 AS `a` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 1; args=(1, 'tjt2iA'); alias=default
+(0.047) SELECT 1 AS `a` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 1; args=(1, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT 1 AS `a` FROM `group_members` WHERE (`group_members`.`group_id` = 'tjt2iA' AND `group_members`.`user_id` = 'bd186f02ff814223b901c6d9e616cf6b') LIMIT 1; args=(1, 'tjt2iA', 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:36.880191' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:36.880191', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-05-30 13:53:37.326548' AND `django_session`.`session_key` = 'ilqqs4i029u5ihh11h6vwug4wk47x0nw') LIMIT 21; args=('2023-05-30 13:53:37.326548', 'ilqqs4i029u5ihh11h6vwug4wk47x0nw'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`paid_time`, `user_profile`.`paid`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SHOW FULL TABLES; args=None; alias=default
+(0.110) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default

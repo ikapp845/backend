@@ -38,6 +38,11 @@ class Members(models.Model):
   group = models.ForeignKey(Group,on_delete = models.CASCADE)
   user = models.ForeignKey(Profile,on_delete = models.CASCADE)
 
+  class Meta:
+    constraints = [
+      models.UniqueConstraint(fields=['user', 'group'], name='unique_user_group')
+    ]
+
   def __str__(self):
     return self.group.name + "  " + self.user.name 
 
