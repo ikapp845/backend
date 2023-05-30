@@ -10,11 +10,11 @@ class LikeSerializer(serializers.ModelSerializer):
   from_gender = serializers.SerializerMethodField("get_fromgender")
   username = serializers.SerializerMethodField("to_username")
   email = serializers.SerializerMethodField("to_email")
-  viewed = serializers.SerializerMethodField("to_viewed")
 
   class Meta:
     model = Like
     exclude = ["user_from","user_to"]
+
 
   def get_question(self,like):
     return like.question.question
@@ -38,9 +38,7 @@ class LikeSerializer(serializers.ModelSerializer):
   def get_fromgender(self,like):
     return like.user_from.gender
  
-  def to_viewed(self,like):
-    return False
-
+ 
 
 class FriendLikeSerializer(serializers.ModelSerializer):
   question = serializers.SerializerMethodField("get_question")
@@ -50,7 +48,7 @@ class FriendLikeSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Like
-    exclude = ["user_from","user_to","group"]
+    exclude = ["user_from","user_to","group","source","visited"]
 
   def to_viewed(self,like):
     return False

@@ -94,6 +94,7 @@ def asked_like(request):
   return Response(result)
 
 
+from itertools import chain
 
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
@@ -101,7 +102,9 @@ def get_likes(request,username):
   with transaction.atomic():
     user = Profile.objects.get(email = username)
     likes = Like.objects.filter(user_to=user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:100]
-  serializer = LikeSerializer(likes,many=True)
+    asked = AskedLike.objects.filter(user_to = user).select_related("group","user_to","question","user_from").order_by("-time")[:50]
+  union = chain(likes,asked)
+  serializer = LikeSerializer(union,many=True)
 
   return Response(serializer.data)
 
@@ -112,7 +115,9 @@ def get_friends_likes(request,username):
   with transaction.atomic():
     user = Profile.objects.get(email = username)
     likes = Like.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
-  serializer = FriendLikeSerializer(likes,many=True)
+    asked = AskedLike.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
+  union = chain(likes,asked)
+  serializer = FriendLikeSerializer(union,many=True)
 
   return Response(serializer.data)
 

@@ -14,6 +14,7 @@ class Like(models.Model):
   question = models.ForeignKey(Question,on_delete = models.CASCADE,null = True)
   time = models.DateTimeField(default = timezone.now)
   visited = models.BooleanField(default = False,null = True,blank = True)
+  source = models.CharField(default = "ik",max_length = 100)
 
   def __str__(self):
     return self.user_from.name + " to " + self.user_to.name
@@ -27,6 +28,7 @@ class AskedLike(models.Model):
   question = models.ForeignKey(AskQuestion, on_delete = models.CASCADE)
   time = models.DateTimeField(default = timezone.now,null = True,blank = True)
   visited = models.BooleanField(default = False,null = True,blank = True)
+  source = models.CharField(default = "user",max_length = 100)
 
   def __str__(self):
     return self.user_from.name + " to " + self.user_to.name + self.group.name + self.question.question
