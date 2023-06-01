@@ -13,5 +13,6 @@ urlpatterns = [
   path("add/",views.add,name = "asd"),
   path("report/<str:group>/<str:question>",views.report,name = "Report"),
   path("add_group_members/",views.add_group_members_contact,name = "Add members"),
-  path("remove_member/",views.remove_member,name = "Remove members")
+  path("remove_member/",views.remove_member,name = "Remove members"),
+  path("delete_account",views.delete_account,name = "Delete Account")
 ]

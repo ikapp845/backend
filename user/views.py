@@ -162,14 +162,7 @@ def get_group_contacts(request):
       final.append({"name":items.name,"id":items.id,"image":"https://profilepicik.s3.amazonaws.com/media/{}.jpg".format(items.email)})
   return Response(final)
 
-@api_view(["GET"])
-@permission_classes([IsAuthenticated])
-def delete_account(request):
-  user = User.objects.get(username = request.user.username)
-  prof = Profile.objects.get(email = request.user.username)
-  user.delete()
-  prof.delete()
-  return Response("Deleted")
+
 
 from django.utils import timezone
 

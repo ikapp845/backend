@@ -10,7 +10,6 @@ urlpatterns = [
   path("check_otp/<str:email>/<str:otp>/",views.check_otp,name = "Check OTP"),
   path("get_contacts/",views.get_contacts,name = "Get Contacts"),
   path("get_group_contacts/",views.get_group_contacts,name = "Get Group Contacts"),
-  path("delete_account",views.delete_account,name = "Delete Account"),
   path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
   path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
   path("verify/",views.verify_token,name = "Verify Token"),

@@ -26,7 +26,6 @@ class Profile(models.Model):
   total_likes = models.IntegerField(null = True,blank = True,default=0)
   coins = models.IntegerField(default = 0)
 
-
   def __str__(self):
     return self.email
 

@@ -17,6 +17,7 @@ from django.utils import timezone
 from .models import AskQuestion,Report
 import json
 from django.core.cache import cache
+from django.contrib.auth.models import User
 
 
 @api_view(["POST"])
@@ -139,8 +140,7 @@ def group_main(request,group,email):
   final = {"members":group_mem,"questions":group_ques,"time" : time}
   return Response(final)
 
-
-#{"username"","group""} 
+ 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def leave(request):
@@ -148,6 +148,13 @@ def leave(request):
   with transaction.atomic():
     group = Group.objects.get(id =req["group"] )
     user = Profile.objects.get(email= request.user.username)
+    if group.admin == user:
+      try:
+        new_admin = Members.objects.filter(group = items).order_by("added")[1]
+        items.admin = new_admin.user
+        items.save()
+      except IndexError:
+        items.delete()
     mem = Members.objects.get(group = group,user = user)
     mem.delete()
   return Response("removed")
@@ -200,3 +207,21 @@ def remove_member(request):
   members = Members.objects.select_related("user","group").filter(group = group)
   serializer = MemberSerializer(members,many = True)
   return Response(serializer.data)
+
+@api_view(["GET"])
+# @permission_classes([IsAuthenticated])
+def delete_account(request):
+  user = User.objects.get(username = request.user.username)
+  prof = Profile.objects.get(email = request.user.username)
+  groups = Group.objects.filter(admin = prof)
+  if groups.exists():
+    for items in groups:
+      try:
+        new_admin = Members.objects.filter(group = items).order_by("added")[1]
+        items.admin = new_admin.user
+        items.save()
+      except IndexError:
+        items.delete()
+  user.delete()
+  prof.delete()
+  return Response("Deleted")

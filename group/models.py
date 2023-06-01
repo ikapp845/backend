@@ -1,6 +1,4 @@
 from django.db import models
-from django.db import models
-from django.db import models
 import uuid
 from user.models import Profile
 from question.models import Question
@@ -8,6 +6,8 @@ import random
 import string
 from datetime import datetime
 from django.utils import timezone
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 
 
 def key_generator():
@@ -23,8 +23,8 @@ def key_generator():
     
 
 
-
 class Group(models.Model):
+  
   name = models.CharField(max_length = 200,null  =True,blank = True)
   id = models.CharField(max_length=6, default=key_generator, unique=True, editable=False,primary_key = True)
   admin = models.ForeignKey(Profile,on_delete = models.SET_NULL,null = True,blank = True)
@@ -33,10 +33,12 @@ class Group(models.Model):
     return self.name + " " + self.id
 
 
+
 class Members(models.Model):
   id = models.UUIDField(default = uuid.uuid4,unique = True,primary_key = True,editable = False)
   group = models.ForeignKey(Group,on_delete = models.CASCADE)
   user = models.ForeignKey(Profile,on_delete = models.CASCADE)
+  added = models.DateTimeField(default=timezone.now)
 
   class Meta:
     constraints = [
