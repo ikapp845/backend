@@ -19,12 +19,11 @@ class Profile(models.Model):
   id = models.UUIDField(default=uuid.uuid4,editable=False,unique=True,primary_key = True)
   email = models.CharField(max_length = 200,null = True,blank = True)
   gender = models.CharField(max_length = 200,null = True,blank = True)
-  paid_time = models.DateField(null=True, blank=True)
-  paid = models.CharField(max_length = 200,default = "False")
   last_login = models.DateTimeField(default=timezone.now,null = True,blank = True)
   image_url = models.ImageField(upload_to = "media/",null = True,blank = True)
   total_likes = models.IntegerField(null = True,blank = True,default=0)
   coins = models.IntegerField(default = 0)
+  reveal = models.IntegerField(default = 0)
 
   def __str__(self):
     return self.email

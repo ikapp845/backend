@@ -8,7 +8,8 @@ from datetime import datetime
 from django.utils import timezone
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
-
+from django.db.models.signals import (post_save,pre_delete)
+from django.dispatch import receiver
 
 def key_generator():
      # Generate a list of possible characters
@@ -22,16 +23,14 @@ def key_generator():
     return code
     
 
-
 class Group(models.Model):
-  
   name = models.CharField(max_length = 200,null  =True,blank = True)
   id = models.CharField(max_length=6, default=key_generator, unique=True, editable=False,primary_key = True)
   admin = models.ForeignKey(Profile,on_delete = models.SET_NULL,null = True,blank = True)
+  count = models.IntegerField(default = 0)
 
   def __str__(self):
     return self.name + " " + self.id
-
 
 
 class Members(models.Model):
@@ -48,6 +47,18 @@ class Members(models.Model):
   def __str__(self):
     return self.group.name + "  " + self.user.name 
 
+@receiver(post_save,sender =Members)
+def member_added(sender,instance,created,*args,**kwargs):
+  if created == True:
+    group = instance.group
+    group.count += 1
+    group.save()
+
+@receiver(pre_delete,sender = Members)
+def member_deleted(sender,instance,*args,**kwargs):
+  group = instance.group
+  group.count -= 1
+  group.save()
 
 class GroupQuestion(models.Model):
   group = models.ForeignKey(Group,on_delete = models.CASCADE)

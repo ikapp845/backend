@@ -44,7 +44,7 @@ def like(request):
   )
 
   if result[0]["user_to__email"] == username2:
-    a = profiles[username1].coins + 50
+    a = profiles[username1].coins + group.count
     profiles[username1].coins = a
     profiles[username1].save()
 

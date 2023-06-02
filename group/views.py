@@ -3,9 +3,7 @@ from rest_framework.decorators import api_view,permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.db import transaction
-from .models import Group
-from .models import Members,AskQuestion
-from .models import GroupQuestion
+from .models import Group,Members,AskQuestion,GroupQuestion
 from question.models import Question
 from django.shortcuts import render
 from user.models import Profile
