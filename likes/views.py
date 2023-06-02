@@ -6,7 +6,7 @@ from django.db import transaction
 from .models import Like,AskedLike
 from user.models import Profile
 from question.models import Question
-from .serializer import LikeSerializer,FriendLikeSerializer
+from .serializer import LikeSerializer,FriendLikeSerializer,FromUserSerializer
 from group.models import Members,Group,AskQuestion
 from datetime import datetime
 from django.db import transaction
@@ -138,4 +138,22 @@ def like_visited(request):
   return Response("Visited set True")
 
 
-
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def get_reveal(request):
+  like_id = request.data["like"]
+  like = Like.objects.get(id = like_id)
+  if like.revealed == False:
+    user = Profile.objects.get(email = request.user.username)
+    # user = Profile.objects.get(email = "9562267229")
+    if user.coins >= 200:
+      user.coins -= 200
+      serializer = FromUserSerializer(like.user_from,many = False)
+      user.save()
+      like.revealed = True
+      like.save()
+    else:
+      return Response("Insufficient coins")
+  else:
+    serializer = FromUserSerializer(like.user_from,many = False)
+  return Response(serializer.data)

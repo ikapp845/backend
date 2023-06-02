@@ -196,3 +196,6 @@ def verify_token(request):
 def get_coins(request):
   user = Profile.objects.get(email = request.user.username)
   return Response({"user":user.email,"coins":user.coins})
+
+
+

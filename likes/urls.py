@@ -7,5 +7,6 @@ urlpatterns = [
   path("asked/",views.asked_like,name = "Asked Like"),
   path("likes/<str:username>/",views.get_likes,name = "Get Likes"),
   path("friends_likes/<str:username>/",views.get_friends_likes,name = "Friends Likes"),
-  path("set_visited/",views.like_visited,name = "Visited Like")
+  path("set_visited/",views.like_visited,name = "Visited Like"),
+  path("reveal/",views.get_reveal,name = "Reveal")
 ]

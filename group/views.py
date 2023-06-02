@@ -223,3 +223,5 @@ def delete_account(request):
   user.delete()
   prof.delete()
   return Response("Deleted")
+
+
