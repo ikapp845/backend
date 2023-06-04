@@ -14,7 +14,7 @@ from django.db.models import Count, Q, Value,F
 from django.db.models.functions import Coalesce
 
 @api_view(["POST"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def like(request):
   req = request.data
   username1 = req["username1"]
@@ -43,15 +43,13 @@ def like(request):
       .order_by("-count")
   )
 
-  b = 0
   if result[0]["user_to__email"] == username2:
     a = profiles[username1].coins + group.count
-    b = group.count
     profiles[username1].coins = a
     profiles[username1].save()
 
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__id']: {"count": r['count'],"name":r["user_to__name"]} for r in result},"coins":a,"earned":b}
+  result = {"total": total, **{r['user_to__email']: {"count": r['count']} for r in result},"coins":a}
 
   return Response(result)
 

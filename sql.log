@@ -12960,3 +12960,462 @@ ALTER TABLE `user_profile` DROP COLUMN `reveal`; (params ())
 (0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
 (0.047) SHOW FULL TABLES; args=None; alias=default
 (0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.141) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.046) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'fff13521100f4444a1131bc9d8e5891c' LIMIT 21; args=('fff13521100f4444a1131bc9d8e5891c',); alias=default
+(0.234) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` LIMIT 21; args=(); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:17:52.479898' AND `django_session`.`session_key` = 'c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm') LIMIT 21; args=('2023-06-04 08:17:52.479898', 'c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm' LIMIT 21; args=('c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm',); alias=default
+(0.046) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm'); args=('c1tx4npsrbwygb5l5yuq8ccpc4hmc4bm',); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'delvinsaji' LIMIT 21; args=('delvinsaji',); alias=default
+(0.203) UPDATE `auth_user` SET `password` = 'pbkdf2_sha256$390000$iTehq2P9vzTAKbH5rdhMGw$fg9G046JAoL3MNZou874wb4eIqyq49V5h7FN4PPDneE=' WHERE `auth_user`.`id` = 1; args=('pbkdf2_sha256$390000$iTehq2P9vzTAKbH5rdhMGw$fg9G046JAoL3MNZou874wb4eIqyq49V5h7FN4PPDneE=', 1); alias=default
+(0.047) SELECT 1 AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp' LIMIT 1; args=(1, 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.031) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('ebxs8f02ltwxpzew9qj138kdljfkbcsp', 'e30:1q5iw3:V3_xqxqROTiJ3O2HsmhY4euhS42dW8wCjgYsRjsQIyg', '2023-06-18 08:17:59.776774'); args=('ebxs8f02ltwxpzew9qj138kdljfkbcsp', 'e30:1q5iw3:V3_xqxqROTiJ3O2HsmhY4euhS42dW8wCjgYsRjsQIyg', '2023-06-18 08:17:59.776774'); alias=default
+(0.047) UPDATE `auth_user` SET `last_login` = '2023-06-04 08:17:59.947279' WHERE `auth_user`.`id` = 1; args=('2023-06-04 08:17:59.947279', 1); alias=default
+(0.047) UPDATE `django_session` SET `session_data` = '.eJxVjEsOwiAUAO_C2hCgfF267xnIe8CTqqFJaVfGuxuSLnQ7M5k3i3DsNR69bHHJ7Moku_wyhPQsbYj8gHZfeVrbvi3IR8JP2_m85vK6ne3foEKvYwvknfGqeAQfIEgZtELUiiRaYd2EmhQFcqUkFARhkuSFtlJbhQYM-3wB3Yc3pw:1q5iw3:6aCtzLBxNfEZEO6B-IhAcVkIqDuoEU_gXwPQZXR5mwY', `expire_date` = '2023-06-18 08:17:59.994656' WHERE `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'; args=('.eJxVjEsOwiAUAO_C2hCgfF267xnIe8CTqqFJaVfGuxuSLnQ7M5k3i3DsNR69bHHJ7Moku_wyhPQsbYj8gHZfeVrbvi3IR8JP2_m85vK6ne3foEKvYwvknfGqeAQfIEgZtELUiiRaYd2EmhQFcqUkFARhkuSFtlJbhQYM-3wB3Yc3pw:1q5iw3:6aCtzLBxNfEZEO6B-IhAcVkIqDuoEU_gXwPQZXR5mwY', '2023-06-18 08:17:59.994656', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:00.186608' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:00.186608', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.156) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:00.875990' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:00.875990', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.141) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:13.441393' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:13.441393', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT COUNT(*) AS `__count` FROM `question_question`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `question_question`; args=(); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` ORDER BY `question_question`.`id` DESC LIMIT 100; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:14.171044' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:14.171044', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:14.628866' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:14.628866', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `question_question`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `question_question`; args=(); alias=default
+(0.500) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` ORDER BY `question_question`.`id` DESC LIMIT 100; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:29.814320' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:29.814320', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT COUNT(*) AS `__count` FROM `group_group`; args=(); alias=default
+(0.032) SELECT COUNT(*) AS `__count` FROM `group_group`; args=(); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` ORDER BY `group_group`.`id` DESC; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:30.447038' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:30.447038', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-04 08:18:30.873485' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-04 08:18:30.873485', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.156) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_group`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` ORDER BY `group_group`.`id` DESC; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('a1cfa3ed5a0d4626887ad927b6e129f3', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:18:39.688532', 0, 'ik', 0); args=('a1cfa3ed5a0d4626887ad927b6e129f3', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:18:39.688532', False, 'ik', False); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 17, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 17, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 4, `name` = 'Delvin Saji', `email` = '9562267229', `gender` = 'boy', `last_login` = '2023-06-04 07:08:40.747531', `image_url` = 'media/Wed_May_24_2023_160950_GMT0530.jpg', `total_likes` = 0, `coins` = 141 WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b'; args=(4, 'Delvin Saji', '9562267229', 'boy', '2023-06-04 07:08:40.747531', 'media/Wed_May_24_2023_160950_GMT0530.jpg', 0, 141, 'ba508787acb9489092a1b6885c791b0b'); alias=default
+(0.047) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('b458dac59aa042e983a580f77fcba0ad', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:20:21.559052', 0, 'ik', 0); args=('b458dac59aa042e983a580f77fcba0ad', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:20:21.559052', False, 'ik', False); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 18, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 18, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `likes_like`.`user_to_id`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email` ORDER BY `count` DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 4, `name` = 'Delvin Saji', `email` = '9562267229', `gender` = 'boy', `last_login` = '2023-06-04 07:08:40.747531', `image_url` = 'media/Wed_May_24_2023_160950_GMT0530.jpg', `total_likes` = 0, `coins` = 142 WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b'; args=(4, 'Delvin Saji', '9562267229', 'boy', '2023-06-04 07:08:40.747531', 'media/Wed_May_24_2023_160950_GMT0530.jpg', 0, 142, 'ba508787acb9489092a1b6885c791b0b'); alias=default
+(0.047) SELECT `likes_like`.`user_to_id`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email` ORDER BY `count` DESC; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.032) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SHOW FULL TABLES; args=None; alias=default
+(0.063) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.031) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('7cb7ec3537d547a3aa57525e3a1c37ef', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:22:37.851102', 0, 'ik', 0); args=('7cb7ec3537d547a3aa57525e3a1c37ef', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:22:37.851102', False, 'ik', False); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 19, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 19, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `likes_like`.`user_to_id`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email` ORDER BY `count` DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 4, `name` = 'Delvin Saji', `email` = '9562267229', `gender` = 'boy', `last_login` = '2023-06-04 07:08:40.747531', `image_url` = 'media/Wed_May_24_2023_160950_GMT0530.jpg', `total_likes` = 0, `coins` = 143 WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b'; args=(4, 'Delvin Saji', '9562267229', 'boy', '2023-06-04 07:08:40.747531', 'media/Wed_May_24_2023_160950_GMT0530.jpg', 0, 143, 'ba508787acb9489092a1b6885c791b0b'); alias=default
+(0.047) SELECT `likes_like`.`user_to_id`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email` ORDER BY `count` DESC; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.032) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added` FROM `group_members` WHERE `group_members`.`group_id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `likes_like`.`id`, `likes_like`.`user_from_id`, `likes_like`.`user_to_id`, `likes_like`.`group_id`, `likes_like`.`question_id`, `likes_like`.`time`, `likes_like`.`visited`, `likes_like`.`source`, `likes_like`.`revealed` FROM `likes_like` WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.046) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.032) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.032) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('e7841215649540d3a9cbedd6d3043d32', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:30:09.426378', 0, 'ik', 0); args=('e7841215649540d3a9cbedd6d3043d32', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:30:09.426378', False, 'ik', False); alias=default
+(0.032) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 20, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 20, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added` FROM `group_members` WHERE `group_members`.`group_id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `likes_like`.`id`, `likes_like`.`user_from_id`, `likes_like`.`user_to_id`, `likes_like`.`group_id`, `likes_like`.`question_id`, `likes_like`.`time`, `likes_like`.`visited`, `likes_like`.`source`, `likes_like`.`revealed` FROM `likes_like` WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.046) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('dd0f5671f5984fb49c1b1f87a2cda80e', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:30:33.878650', 0, 'ik', 0); args=('dd0f5671f5984fb49c1b1f87a2cda80e', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:30:33.878650', False, 'ik', False); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 21, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 21, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added` FROM `group_members` WHERE `group_members`.`group_id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `likes_like`.`id`, `likes_like`.`user_from_id`, `likes_like`.`user_to_id`, `likes_like`.`group_id`, `likes_like`.`question_id`, `likes_like`.`time`, `likes_like`.`visited`, `likes_like`.`source`, `likes_like`.`revealed` FROM `likes_like` WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.063) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.032) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.047) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('b6f6de2c551d42ad8558c5c185c7a432', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:31:06.331665', 0, 'ik', 0); args=('b6f6de2c551d42ad8558c5c185c7a432', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:31:06.331665', False, 'ik', False); alias=default
+(0.031) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 22, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 22, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.032) SELECT CAST(`likes_like`.`user_to_id` AS char) AS `user_to_id_str`, COUNT(`likes_like`.`id`) AS `user_count`, `user_profile`.`email` AS `user_email` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email`, CAST(`likes_like`.`user_to_id` AS char) ORDER BY COUNT(`likes_like`.`id`) DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added` FROM `group_members` WHERE `group_members`.`group_id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `likes_like`.`id`, `likes_like`.`user_from_id`, `likes_like`.`user_to_id`, `likes_like`.`group_id`, `likes_like`.`question_id`, `likes_like`.`time`, `likes_like`.`visited`, `likes_like`.`source`, `likes_like`.`revealed` FROM `likes_like` WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT CAST(`likes_like`.`user_to_id` AS char) AS `user_to_id_str`, COUNT(`likes_like`.`id`) AS `user_count`, `user_profile`.`email` AS `user_email` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `likes_like`.`user_to_id`, `user_profile`.`email`, CAST(`likes_like`.`user_to_id` AS char) ORDER BY COUNT(`likes_like`.`id`) DESC LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.031) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('f3f400328e614fa8a9cc6fb751eda2d7', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:32:27.241645', 0, 'ik', 0); args=('f3f400328e614fa8a9cc6fb751eda2d7', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:32:27.241645', False, 'ik', False); alias=default
+(0.047) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 23, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 23, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.031) UPDATE `user_profile` SET `user_id` = 4, `name` = 'Delvin Saji', `email` = '9562267229', `gender` = 'boy', `last_login` = '2023-06-04 07:08:40.747531', `image_url` = 'media/Wed_May_24_2023_160950_GMT0530.jpg', `total_likes` = 0, `coins` = 144 WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b'; args=(4, 'Delvin Saji', '9562267229', 'boy', '2023-06-04 07:08:40.747531', 'media/Wed_May_24_2023_160950_GMT0530.jpg', 0, 144, 'ba508787acb9489092a1b6885c791b0b'); alias=default
+(0.031) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added` FROM `group_members` WHERE `group_members`.`group_id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `likes_like`.`id`, `likes_like`.`user_from_id`, `likes_like`.`user_to_id`, `likes_like`.`group_id`, `likes_like`.`question_id`, `likes_like`.`time`, `likes_like`.`visited`, `likes_like`.`source`, `likes_like`.`revealed` FROM `likes_like` WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') LIMIT 21; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b' LIMIT 21; args=('bd186f02ff814223b901c6d9e616cf6b',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SHOW FULL TABLES; args=None; alias=default
+(0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins` FROM `user_profile` WHERE `user_profile`.`email` IN ('9562267229', '9061031229'); args=('9562267229', '9061031229'); alias=default
+(0.031) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` WHERE `question_question`.`id` = 'ff9c705f2ff64836a8cb368103710e20' LIMIT 21; args=('ff9c705f2ff64836a8cb368103710e20',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'tjt2iA' LIMIT 21; args=('tjt2iA',); alias=default
+(0.047) INSERT INTO `likes_like` (`id`, `user_from_id`, `user_to_id`, `group_id`, `question_id`, `time`, `visited`, `source`, `revealed`) VALUES ('6a35f008a55e4ae0b8f42e5f63d3d2d8', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:32:43.368186', 0, 'ik', 0); args=('6a35f008a55e4ae0b8f42e5f63d3d2d8', 'ba508787acb9489092a1b6885c791b0b', 'bd186f02ff814223b901c6d9e616cf6b', 'tjt2iA', 'ff9c705f2ff64836a8cb368103710e20', '2023-06-04 08:32:43.368186', False, 'ik', False); alias=default
+(0.032) UPDATE `user_profile` SET `user_id` = 5, `name` = 'Sam', `email` = '9061031229', `gender` = 'boy', `last_login` = '2023-05-30 13:40:21', `image_url` = 'media/9061031229.png', `total_likes` = 24, `coins` = 0 WHERE `user_profile`.`id` = 'bd186f02ff814223b901c6d9e616cf6b'; args=(5, 'Sam', '9061031229', 'boy', '2023-05-30 13:40:21', 'media/9061031229.png', 24, 0, 'bd186f02ff814223b901c6d9e616cf6b'); alias=default
+(0.047) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC LIMIT 1; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
+(0.046) UPDATE `user_profile` SET `user_id` = 4, `name` = 'Delvin Saji', `email` = '9562267229', `gender` = 'boy', `last_login` = '2023-06-04 07:08:40.747531', `image_url` = 'media/Wed_May_24_2023_160950_GMT0530.jpg', `total_likes` = 0, `coins` = 145 WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b'; args=(4, 'Delvin Saji', '9562267229', 'boy', '2023-06-04 07:08:40.747531', 'media/Wed_May_24_2023_160950_GMT0530.jpg', 0, 145, 'ba508787acb9489092a1b6885c791b0b'); alias=default
+(0.047) SELECT `user_profile`.`name`, `user_profile`.`email`, COUNT(`likes_like`.`id`) AS `count` FROM `likes_like` INNER JOIN `user_profile` ON (`likes_like`.`user_to_id` = `user_profile`.`id`) WHERE (`likes_like`.`group_id` = 'tjt2iA' AND `likes_like`.`question_id` = 'ff9c705f2ff64836a8cb368103710e20') GROUP BY `user_profile`.`name`, `user_profile`.`email` ORDER BY `count` DESC; args=('tjt2iA', 'ff9c705f2ff64836a8cb368103710e20'); alias=default
