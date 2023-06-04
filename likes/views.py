@@ -43,13 +43,15 @@ def like(request):
       .order_by("-count")
   )
 
+  b = 0
   if result[0]["user_to__email"] == username2:
     a = profiles[username1].coins + group.count
+    b = group.count
     profiles[username1].coins = a
     profiles[username1].save()
 
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a}
+  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a,"earned":b}
 
   return Response(result)
 
