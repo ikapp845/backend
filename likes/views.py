@@ -51,7 +51,7 @@ def like(request):
     profiles[username1].save()
 
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__name']: {"count": r['count'],"id":r["user_to__id"]} for r in result},"coins":a,"earned":b}
+  result = {"total": total, **{r['user_to__id']: {"count": r['count'],"name":r["user_to__name"]} for r in result},"coins":a,"earned":b}
 
   return Response(result)
 
