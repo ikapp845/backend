@@ -84,7 +84,8 @@ def asked_like(request):
       .values('user_to__name', 'count')
       .order_by("-count")
   )
-
+  
+  a = profiles[username1].coins 
   if result[0]["user_to__email"] == username2:
     a = profiles[username1].coins + 50
     profiles[username1].coins = a
