@@ -145,17 +145,20 @@ def like_visited(request):
 def get_reveal(request):
   like_id = request.data["like"]
   like = Like.objects.get(id = like_id)
-  if like.revealed == False:
-    user = Profile.objects.get(email = request.user.username)
-    # user = Profile.objects.get(email = "9562267229")
-    if user.coins >= 200:
-      user.coins -= 200
-      serializer = FromUserSerializer(like.user_from,many = False)
-      user.save()
-      like.revealed = True
-      like.save()
-    else:
-      return Response("Insufficient coins")
+  if like.user_from.mode == True:
+    return Response("Premium")
   else:
-    serializer = FromUserSerializer(like.user_from,many = False)
+    if like.revealed == False:
+      user = Profile.objects.get(email = request.user.username)
+      # user = Profile.objects.get(email = "9562267229")
+      if user.coins >= 200:
+        user.coins -= 200
+        serializer = FromUserSerializer(like.user_from,many = False)
+        user.save()
+        like.revealed = True
+        like.save()
+      else:
+        return Response("Insufficient coins")
+    else:
+      serializer = FromUserSerializer(like.user_from,many = False)
   return Response(serializer.data)

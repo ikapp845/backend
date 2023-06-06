@@ -23,6 +23,7 @@ class Profile(models.Model):
   image_url = models.ImageField(upload_to = "media/",null = True,blank = True)
   total_likes = models.IntegerField(null = True,blank = True,default=0)
   coins = models.IntegerField(default = 0)
+  mode = models.BooleanField(default = False)
 
   def __str__(self):
     return self.email
