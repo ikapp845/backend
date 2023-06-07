@@ -127,6 +127,23 @@ def get_friends_likes(request,username):
 
   return Response(serializer.data)
 
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def get_likes_data(request):
+  with transaction.atomic():
+    user = Profile.objects.get(email = request.user.username)
+    likes = Like.objects.filter(user_to=user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:100]
+    asked = AskedLike.objects.filter(user_to = user).select_related("group","user_to","question","user_from").order_by("-time")[:50]
+  union = chain(likes,asked)
+  serializer1 = LikeSerializer(union,many=True)
+
+  with transaction.atomic():
+    likes = Like.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
+    asked = AskedLike.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
+  union = chain(likes,asked)
+  serializer2 = FriendLikeSerializer(union,many=True)
+
+  return Response({"mine":serializer1.data,"friends":serializer2.data})
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
