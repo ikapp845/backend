@@ -44,6 +44,7 @@ def like(request):
   )
 
   b = 0
+  a = profiles[username1].coins 
   if result[0]["user_to__email"] == username2:
     a = profiles[username1].coins + group.count
     b = group.count
@@ -86,13 +87,15 @@ def asked_like(request):
   )
   
   a = profiles[username1].coins 
+  b = 0
   if result[0]["user_to__email"] == username2:
-    a = profiles[username1].coins + 50
+    a = profiles[username1].coins + group.count
+    b = group.count
     profiles[username1].coins = a
     profiles[username1].save()
 
   total = sum(r['count'] for r in result)
-  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a}
+  result = {"total": total, **{r['user_to__name']: {"count": r['count']} for r in result},"coins":a,"earned":b}
 
   return Response(result)
 
