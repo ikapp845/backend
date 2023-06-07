@@ -13506,3 +13506,398 @@ ALTER TABLE `user_profile` ALTER COLUMN `mode` DROP DEFAULT; (params [])
 (0.078) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',); alias=default
 (0.079) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
 (0.062) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '' LIMIT 21; args=('',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` LIMIT 21; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '' LIMIT 21; args=('',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` LIMIT 21; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.032) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.047) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.281) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.297) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.141) DELETE FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:16:52.115482') LIMIT 21; args=('ACsWa8', '2023-06-07 14:16:52.115482'); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:16:52.115482'); args=('ACsWa8', '2023-06-07 14:16:52.115482'); alias=default
+(0.031) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` ORDER BY RAND() ASC LIMIT 10; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.078) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) DELETE FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:18:18.912493') LIMIT 21; args=('ACsWa8', '2023-06-07 14:18:18.912493'); alias=default
+(0.296) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:18:18.912493'); args=('ACsWa8', '2023-06-07 14:18:18.912493'); alias=default
+(0.032) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` ORDER BY RAND() ASC LIMIT 9; args=(); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:29.629448' AND `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp') LIMIT 21; args=('2023-06-07 15:18:29.629448', 'ebxs8f02ltwxpzew9qj138kdljfkbcsp'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'ebxs8f02ltwxpzew9qj138kdljfkbcsp' LIMIT 21; args=('ebxs8f02ltwxpzew9qj138kdljfkbcsp',); alias=default
+(0.047) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('ebxs8f02ltwxpzew9qj138kdljfkbcsp'); args=('ebxs8f02ltwxpzew9qj138kdljfkbcsp',); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'delvinsaji' LIMIT 21; args=('delvinsaji',); alias=default
+(0.032) UPDATE `auth_user` SET `password` = 'pbkdf2_sha256$390000$eiO6g54z6IlQ0YjAvN2lCN$HJ0vo0xU2crwLxcYHCMFPuCXpCOsj/XgkRbl3QHMNeg=' WHERE `auth_user`.`id` = 1; args=('pbkdf2_sha256$390000$eiO6g54z6IlQ0YjAvN2lCN$HJ0vo0xU2crwLxcYHCMFPuCXpCOsj/XgkRbl3QHMNeg=', 1); alias=default
+(0.031) SELECT 1 AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh' LIMIT 1; args=(1, 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.032) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('rfvr45f397aq2bpttjztwjez5e6ekiqh', 'e30:1q6uvk:_RUYrPY2KO4q0aOFNeL2qzfUWtnyDVHqm6LLJjPRLFs', '2023-06-21 15:18:36.312860'); args=('rfvr45f397aq2bpttjztwjez5e6ekiqh', 'e30:1q6uvk:_RUYrPY2KO4q0aOFNeL2qzfUWtnyDVHqm6LLJjPRLFs', '2023-06-21 15:18:36.312860'); alias=default
+(0.047) UPDATE `auth_user` SET `last_login` = '2023-06-07 15:18:36.470618' WHERE `auth_user`.`id` = 1; args=('2023-06-07 15:18:36.470618', 1); alias=default
+(0.032) UPDATE `django_session` SET `session_data` = '.eJxVjEEOwiAQRe_C2pDClEJduu8ZyAwwUjWQlHZlvLtt0oVu_3vvv4XHbc1-a2nxcxRXocTldyMMz1QOEB9Y7lWGWtZlJnko8qRNTjWm1-10_w4ytrzXANyZEB0aJNbElkIyNpnAQ-JRdwYQgFSvo9oFQmsYRwDdq4GdUyQ-XxCnOLM:1q6uvk:Ko62qoA9bvJmt6KIJkVoijo5ostjeHAwgmsEY8MCPfk', `expire_date` = '2023-06-21 15:18:36.515485' WHERE `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh'; args=('.eJxVjEEOwiAQRe_C2pDClEJduu8ZyAwwUjWQlHZlvLtt0oVu_3vvv4XHbc1-a2nxcxRXocTldyMMz1QOEB9Y7lWGWtZlJnko8qRNTjWm1-10_w4ytrzXANyZEB0aJNbElkIyNpnAQ-JRdwYQgFSvo9oFQmsYRwDdq4GdUyQ-XxCnOLM:1q6uvk:Ko62qoA9bvJmt6KIJkVoijo5ostjeHAwgmsEY8MCPfk', '2023-06-21 15:18:36.515485', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:36.698166' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:36.698166', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:37.226395' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:37.226395', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:40.756631' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:40.756631', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.032) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.046) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:41.459753' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:41.459753', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:41.846512' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:41.846512', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.031) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:43.241171' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:43.241171', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = 'f899320c52bf4bab849d736577591c27' LIMIT 21; args=('f899320c52bf4bab849d736577591c27',); alias=default
+(0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'group' AND `django_content_type`.`model` = 'askquestion') LIMIT 21; args=('group', 'askquestion'); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.312) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:44.298049' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:44.298049', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:45.272458' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:45.272458', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = 'f899320c52bf4bab849d736577591c27' LIMIT 21; args=('f899320c52bf4bab849d736577591c27',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:48.432391' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:48.432391', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:49.045901' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:49.045901', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.032) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:50.118296' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:50.118296', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.046) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = '189e25790ac64d6a8f948a9d1c80b4fd' LIMIT 21; args=('189e25790ac64d6a8f948a9d1c80b4fd',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:51.775195' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:51.775195', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:52.156014' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:52.156014', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = '189e25790ac64d6a8f948a9d1c80b4fd' LIMIT 21; args=('189e25790ac64d6a8f948a9d1c80b4fd',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.531) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:57.169493' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:57.169493', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.282) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:18:59.286994' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:18:59.286994', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:19:00.643489' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:19:00.643489', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.047) SELECT COUNT(*) AS `__count` FROM `group_askquestion`; args=(); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` ORDER BY `group_askquestion`.`id` DESC; args=(); alias=default
+(0.047) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = '542cf83fc0814d9e920c9e8065ed978a' LIMIT 21; args=('542cf83fc0814d9e920c9e8065ed978a',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.125) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:19:01.400570' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:19:01.400570', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2023-06-07 15:19:01.800170' AND `django_session`.`session_key` = 'rfvr45f397aq2bpttjztwjez5e6ekiqh') LIMIT 21; args=('2023-06-07 15:19:01.800170', 'rfvr45f397aq2bpttjztwjez5e6ekiqh'); alias=default
+(0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.032) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE `group_askquestion`.`id` = '542cf83fc0814d9e920c9e8065ed978a' LIMIT 21; args=('542cf83fc0814d9e920c9e8065ed978a',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group`; args=(); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile`; args=(); alias=default
+(0.046) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.046) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SHOW FULL TABLES; args=None; alias=default
+(0.031) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+(0.047) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.031) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.032) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.032) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.031) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.047) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.046) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.047) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:21:50.063443') LIMIT 21; args=('ACsWa8', '2023-06-07 14:21:50.063443'); alias=default
+(0.046) SELECT `group_askquestion`.`id`, `group_askquestion`.`group_id`, `group_askquestion`.`question`, `group_askquestion`.`user_id`, `group_askquestion`.`time` FROM `group_askquestion` WHERE (`group_askquestion`.`group_id` = 'ACsWa8' AND `group_askquestion`.`time` > '2023-06-07 14:21:50.063443'); args=('ACsWa8', '2023-06-07 14:21:50.063443'); alias=default
+(0.032) SELECT `question_question`.`id`, `question_question`.`question` FROM `question_question` ORDER BY RAND() ASC LIMIT 9; args=(); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.032) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.046) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.032) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.031) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.031) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.047) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.031) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWA8' LIMIT 21; args=('ACsWA8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`email` = '9562267229' LIMIT 21; args=('9562267229',); alias=default
+(0.046) SELECT `group_members`.`id`, `group_members`.`group_id`, `group_members`.`user_id`, `group_members`.`added`, `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `group_members` INNER JOIN `user_profile` ON (`group_members`.`user_id` = `user_profile`.`id`) WHERE `group_members`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default
+(0.032) SELECT `group_group`.`name`, `group_group`.`id`, `group_group`.`admin_id`, `group_group`.`count` FROM `group_group` WHERE `group_group`.`id` = 'ACsWa8' LIMIT 21; args=('ACsWa8',); alias=default
+(0.047) SELECT `user_profile`.`user_id`, `user_profile`.`name`, `user_profile`.`id`, `user_profile`.`email`, `user_profile`.`gender`, `user_profile`.`last_login`, `user_profile`.`image_url`, `user_profile`.`total_likes`, `user_profile`.`coins`, `user_profile`.`mode` FROM `user_profile` WHERE `user_profile`.`id` = 'ba508787acb9489092a1b6885c791b0b' LIMIT 21; args=('ba508787acb9489092a1b6885c791b0b',); alias=default
+(0.046) SELECT `group_groupquestion`.`id`, `group_groupquestion`.`group_id`, `group_groupquestion`.`question`, `group_groupquestion`.`question_id`, `group_groupquestion`.`time`, `group_groupquestion`.`source` FROM `group_groupquestion` WHERE `group_groupquestion`.`group_id` = 'ACsWa8'; args=('ACsWa8',); alias=default

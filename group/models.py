@@ -77,7 +77,7 @@ class AskQuestion(models.Model):
   group = models.ForeignKey(Group, on_delete = models.CASCADE)
   question = models.CharField(max_length = 200,null = True,blank = True)
   user = models.ForeignKey(Profile,on_delete = models.CASCADE,null = True,blank = True)
-  time = models.DateTimeField(default=datetime.now())
+  time = models.DateTimeField(default=timezone.now())
 
 
 

@@ -94,7 +94,7 @@ def group_members(request,group):
   return Response(serializer.data)
 
 @api_view(["GET"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def group_main(request,group,email):
 
   def group_members(gp):
@@ -108,7 +108,8 @@ def group_main(request,group,email):
     now = timezone.now()
     one_hour_ago = now - timezone.timedelta(hours = 1)
     if not question_list or compare_dates(question_list[len(question_list) - 1].time, now) == True:
-      g = GroupQuestion.objects.filter(group = gp).delete()
+      if question_list:
+        question_list.delete()
       user_que = AskQuestion.objects.filter(group = gp,time__gt = one_hour_ago)
       user_que_count = len(user_que)
       ik_que = Question.objects.filter().order_by("?")[:10-user_que_count]
@@ -132,7 +133,8 @@ def group_main(request,group,email):
 
 
   gp =  Group.objects.get(id = group)
-  user = Profile.objects.get(email = request.user.username)
+  # user = Profile.objects.get(email = request.user.username)
+  user = Profile.objects.get(email = "9562267229")
   group_mem,group_length  = group_members(gp)
   group_ques,time= group_questions(gp,user,group,group_length = group_length)
   final = {"members":group_mem,"questions":group_ques,"time" : time}
@@ -171,7 +173,7 @@ def user_groups(request,username):
 def add_question(request):
   req = request.data
   group = Group.objects.get(id = req["group"])
-  question = AskQuestion.objects.create(group = group,question = req["question"])
+  question = AskQuestion.objects.create(group = group,question = req["question"],user = Profile.objects.get(email = request.user.username))
   question.save()
   return Response("Question Added")
 
