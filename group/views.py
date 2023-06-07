@@ -94,7 +94,7 @@ def group_members(request,group):
   return Response(serializer.data)
 
 @api_view(["GET"])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def group_main(request,group,email):
 
   def group_members(gp):
@@ -133,8 +133,8 @@ def group_main(request,group,email):
 
 
   gp =  Group.objects.get(id = group)
-  # user = Profile.objects.get(email = request.user.username)
-  user = Profile.objects.get(email = "9562267229")
+  user = Profile.objects.get(email = request.user.username)
+  # user = Profile.objects.get(email = "9562267229")
   group_mem,group_length  = group_members(gp)
   group_ques,time= group_questions(gp,user,group,group_length = group_length)
   final = {"members":group_mem,"questions":group_ques,"time" : time}
