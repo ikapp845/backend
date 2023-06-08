@@ -94,12 +94,12 @@ def group_members(request,group):
   return Response(serializer.data)
 
 @api_view(["GET"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def group_main(request,group,email):
 
   def group_members(gp):
-    members = Members.objects.select_related("user").filter(group = gp)
-    group_length = len(members)
+    members = Members.objects.select_related("user","group").filter(group = gp)
+    group_length = members.count()
     serializer = MemberSerializer(members,many = True)
     return serializer.data,group_length
 
@@ -109,8 +109,9 @@ def group_main(request,group,email):
     one_hour_ago = now - timezone.timedelta(hours = 1)
     if not question_list or compare_dates(question_list[len(question_list) - 1].time, now) == True:
       if question_list:
+        before = question_list[0].time 
         question_list.delete()
-      user_que = AskQuestion.objects.filter(group = gp,time__gt = one_hour_ago)
+      user_que = AskQuestion.objects.filter(group = gp,time__gt = before)
       user_que_count = len(user_que)
       ik_que = Question.objects.filter().order_by("?")[:10-user_que_count]
       question_list = list(user_que) + list(ik_que)
@@ -133,8 +134,8 @@ def group_main(request,group,email):
 
 
   gp =  Group.objects.get(id = group)
-  user = Profile.objects.get(email = request.user.username)
-  # user = Profile.objects.get(email = "9562267229")
+  # user = Profile.objects.get(email = request.user.username)
+  user = Profile.objects.get(email = "9562267229")
   group_mem,group_length  = group_members(gp)
   group_ques,time= group_questions(gp,user,group,group_length = group_length)
   final = {"members":group_mem,"questions":group_ques,"time" : time}

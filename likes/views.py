@@ -138,8 +138,8 @@ def get_likes_data(request):
   serializer1 = LikeSerializer(union,many=True)
 
   with transaction.atomic():
-    likes = Like.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
-    asked = AskedLike.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:30]
+    likes = Like.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:50]
+    asked = AskedLike.objects.filter(group__members__user=user).exclude(user_to = user).select_related('group', 'user_to',"question","user_from").order_by("-time")[:50]
   union = chain(likes,asked)
   serializer2 = FriendLikeSerializer(union,many=True)
 
