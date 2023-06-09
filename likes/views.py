@@ -80,9 +80,9 @@ def asked_like(request):
 
   likes = AskedLike.objects.filter(group=question.group, question=question)
   result = (
-      likes.values('user_to__name')
+      likes.values('user_to__name',"user_to__email")
       .annotate(count=Count('id'))
-      .values('user_to__name', 'count')
+      .values('user_to__name','count',"user_to__email")
       .order_by("-count")
   )
   
