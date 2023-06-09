@@ -140,7 +140,7 @@ def get_contacts(request):
   users_found = Profile.objects.filter(email__in = contacs_edited)
   final = []
   for items in users_found:
-    image_url = codecs.decode(items.image_url, 'utf-8')
+    image_url = items.image_url.url if items.image_url else None
     final.append({"name":items.name,"id":items.id,"image":image_url})
   return Response(final)
 
