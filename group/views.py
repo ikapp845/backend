@@ -54,6 +54,8 @@ def join_group(request):
     for items in ask:
       items.total_members = items.total_members + 1
       items.save()
+    group.count += 1
+    group.save()
     return Response("Success")
 
 
@@ -65,6 +67,9 @@ def add_group_members_contact(request):
         group = Group.objects.get(id=request.data["group"])
         users = Profile.objects.filter(id__in=contacts)
         members = [Members(group=group, user=user) for user in users]
+        l = len(members)
+        group.count += 1
+        group.save()
         Members.objects.bulk_create(members)
     return Response("Added")
 

@@ -49,13 +49,16 @@ class Members(models.Model):
 
 @receiver(post_save,sender =Members)
 def member_added(sender,instance,created,*args,**kwargs):
+  print("b")
   if created == True:
+    print("a")
     group = instance.group
     group.count += 1
     group.save()
 
 @receiver(pre_delete,sender = Members)
 def member_deleted(sender,instance,*args,**kwargs):
+  print("c")
   group = instance.group
   group.count -= 1
   group.save()
