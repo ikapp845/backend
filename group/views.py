@@ -106,6 +106,7 @@ def group_main(request,group,email):
     question_list = GroupQuestion.objects.filter(group = gp)
     now = timezone.now()
     one_hour_ago = now - timezone.timedelta(hours = 1)
+    before = one_hour_ago
     if not question_list or compare_dates(question_list[len(question_list) - 1].time, now) == True:
       if question_list:
         before = question_list[0].time 
