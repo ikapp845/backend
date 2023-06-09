@@ -128,6 +128,8 @@ def edit_numbers(numbers):
 #   except:
 #     return Response("no user")
 
+import codecs
+
 @api_view(["POST"])
 def get_contacts(request):
   contacts = request.data["contacts"]
@@ -138,7 +140,8 @@ def get_contacts(request):
   users_found = Profile.objects.filter(email__in = contacs_edited)
   final = []
   for items in users_found:
-    final.append({"name":items.name,"id":items.id,"image":items.image_url})
+    image_url = codecs.decode(items.image_url, 'utf-8')
+    final.append({"name":items.name,"id":items.id,"image":image_url})
   return Response(final)
 
 @api_view(["POST"])
