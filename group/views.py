@@ -50,12 +50,6 @@ def join_group(request):
   except:
     member = Members.objects.create(group = group,user = user)
     member.save()
-    ask = AskQuestion.objects.filter(group = group)
-    for items in ask:
-      items.total_members = items.total_members + 1
-      items.save()
-    group.count += 1
-    group.save()
     return Response("Success")
 
 
