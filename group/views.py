@@ -68,7 +68,7 @@ def add_group_members_contact(request):
         users = Profile.objects.filter(id__in=contacts)
         members = [Members(group=group, user=user) for user in users]
         l = len(members)
-        group.count += 1
+        group.count += l
         group.save()
         Members.objects.bulk_create(members)
     return Response("Added")
