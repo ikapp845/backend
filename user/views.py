@@ -138,7 +138,7 @@ def get_contacts(request):
   users_found = Profile.objects.filter(email__in = contacs_edited)
   final = []
   for items in users_found:
-    final.append({"name":items.name,"id":items.id,"image":"https://profilepicik.s3.amazonaws.com/media/{}.jpg".format(items.email)})
+    final.append({"name":items.name,"id":items.id,"image":items.image_url})
   return Response(final)
 
 @api_view(["POST"])
