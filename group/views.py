@@ -111,7 +111,7 @@ def group_main(request,group,email):
       if question_list:
         before = question_list[0].time 
         question_list.delete()
-      user_que = AskQuestion.objects.filter(group = gp,time__gt = before)
+      user_que = AskQuestion.objects.filter(group = gp,time__gt = before)[:10]
       user_que_count = len(user_que)
       ik_que = Question.objects.filter().order_by("?")[:10-user_que_count]
       question_list = list(user_que) + list(ik_que)
