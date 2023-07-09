@@ -117,7 +117,7 @@ LOGGING = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "ik2",
+        'NAME': "ik",
         "USER":"admin",
         "PASSWORD":"okeda123",
         "HOST":env("DATABASE_HOST"),
