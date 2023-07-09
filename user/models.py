@@ -16,8 +16,8 @@ def key_generator():
 class Profile(models.Model):
   user = models.ForeignKey(User, on_delete = models.CASCADE,null = True,blank = True)
   name = models.CharField(max_length = 200,null = True,blank = True)
-  id = models.UUIDField(default=uuid.uuid4,editable=False,unique=True,primary_key = True)
-  email = models.CharField(max_length = 200,null = True,blank = True)
+  # id = models.UUIDField(default=uuid.uuid4,editable=False,unique=True,primary_key = True)
+  email = models.CharField(max_length = 200,editable = False,unique=True,primary_key=True)
   gender = models.CharField(max_length = 200,null = True,blank = True)
   last_login = models.DateTimeField(default=timezone.now,null = True,blank = True)
   image_url = models.ImageField(upload_to = "media/",null = True,blank = True)
